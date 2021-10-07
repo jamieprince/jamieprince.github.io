@@ -1,67 +1,85 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <!--Meta stuff-->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!--Facebook meta - this comes up when you post a link to the site-->
+    <meta property="og:title" content="Jamie Prince">
+    <meta property="og:description" content="Data Science Portfolio">
+    <meta property="og:image" content="patches.JPG">
+    <meta property="og:url" content="https://github.com/jamieprince/jamieprince.github.io/blob/main/index.html">
+    
+    <!--Title - this is the bit that comes up in the tab-->
+    <title>Jamie's Portfolio</title>
+    
     <link rel="stylesheet" href="index.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
     </style>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    </style>
 
     <!--The next three lines allow the Vega embed-->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+   
 </head>
 
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 
+<!-- ///////////////////  START BODY //////////////////////////////////// -->
 <body>
+        
+        <center><p><b><i>DATA SCIENCE PORTFOLIO</i></b></p>
+        
 
-    <h1>Data Science 2021.</h1>
-
-    <h3>Covid-19</h3>
-
-    <p>The first chart tracks Covid-19 cases by UK region.</p>
-
-<!--Vaga embed, with notes for what is going on-->
-<div class="chart" id="firstChart">
-
-  <script>
-    // Following the script tag we are using Javascript.
-    // One way to tell is to see how comments work...
-    // First job is to set the chart as a JS variable:
-    var myChart1 = "chartCovid1.json";
-    // Now we simply insert it, using Vega's embed code:
-    // The embed function needs to be told the location, and what to put there. 
-    vegaEmbed('#firstChart', myChart1);
-  </script>
-
+<!--Chart 1 -->
+<div class="chart" id="chart1">
+      <script>
+        var myChart1 = "chart1_covidUKRegions.json";
+        vegaEmbed('#chart1', myChart1);
+      </script>
+            </div>
+<!--Chart 2 -->
+<div class="chart" id="chart2">
+    <script>
+      var myChart2 = "chart2_ukProductivity.json";
+      vegaEmbed('#chart2', myChart2);
+    </script>
 </div>
-
-  <h3>Productivity puzzle</h3>
-
-  <p>My second chart looks at productivity in the UK</p>
-
-<div class="chart" id="secondChart">
-  <script>
-    var myChart1 = "chartLine1.json";
-    vegaEmbed('#secondChart', myChart1);
-  </script>
+  <!--Chart 3 -->
+<div class="chart" id="chart3">
+    <script>
+      var myChart3 = "chartENV15.json";
+      vegaEmbed('#chart3', myChart3);
+    </script>
 </div>
-    
+   <!--Chart 4 -->
+<div class="chart" id="chart4">
+    <script>
+      var myChart4 = "Week2Chart4.json";
+      vegaEmbed('#chart4', myChart4);
+    </script>
+</div>
+    <!--Chart 5 -->
+<div class="chart" id="chart5">
+    <script>
+      var myChart5 = "Week2Chart5.json";
+      vegaEmbed('#chart5', myChart5);
+    </script>
+</div>
+        </center>      
 </body>
-
+<!-- ///////////////////  END BODY //////////////////////////////////// -->
 
 </html>
-
-
