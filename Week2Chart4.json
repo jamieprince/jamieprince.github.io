@@ -3,7 +3,7 @@
   
   "title": {
     "text": "New Covid-19 Cases",
-    "subtitle":"Three cities of roughly the same population size. Data source: https://coronavirus.data.gov.uk/",
+    "subtitle":"Three cities of roughly the same population size. Source: https://coronavirus.data.gov.uk/",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
