@@ -6,7 +6,12 @@ body{
     margin: auto;
 }
 
-h1, h2, h3, p{
+h1{
+    color:rgb(17, 17, 17);
+    font-family: 'Work Sans', sans-serif;;
+}
+
+h2, h3, p{
     color:rgb(17, 17, 17);
     font-family: 'Roboto', sans-serif;
 }
