@@ -1,48 +1,46 @@
-{
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/data/chartENV15.csv"
+  "description": "Various US measures state by state",
 
-  },
   "title": {
-    "text": "GDP loss by temperature increase scenario",
-    "subtitle":"By most affected country. Source: Swiss Re",
+    "text": "Gun deaths and income - US states",
+    "subtitle":["Median income (x), and firearm deaths per 100k population (y)",""],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
     "color": "black"
   },
-  "width": {"step": 10},
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/usa/data_USsocioEconomic.csv",
+    "format":{"type":"csv"}},
+
+  "mark": {
+    "type":"circle",
+    "size":150,
+    "color":"rgb(0,67,167)",
+    "opacity":0.6},
+  
   "height": 300,
-  "mark": "bar",
+  "width": 300,
+
   "encoding": {
-    "column": {"field": "Scenario", "type": "nominal", "spacing": 1, "title": null},
-    "y": {
-      "field": "Value 1",
-      "type": "quantitative",
-      "title": null,
-      "scale": {"domain": [-13, 0.5]},
-      "axis": {"grid": false}
-    },
-
     "x": {
-      "field": "Country",
-      "type": "nominal",
-      "axis": {"title": "", "labelColor": "white", "ticks": false},
-      "sort": "-y"
+      "field": "medIncome", 
+      "type": "quantitative",
+      "scale": {"domain": [40000, 80000]},
+      "title":null},
 
-    },
+    "y": {
+      "field": "FirearmDeaths", 
+      "type": "quantitative",
+      "title":null},
+
     "color": {
-      "field": "Country",
-      "scale": {"scheme": "yellowgreenblue"},
-      "legend": {"orient": "right"}
-    },
-    "tooltip": [
-      {"field": "Scenario", "type": "nominal"},
-      {"field": "Value 1", "type": "quantitative", "title": "GDP loss (%)"},
-      {"field": "Country", "type": "nominal"}
-    ]
-  },
-  "config": {"view": {"stroke": "transparent"}, "axis": {"domainWidth": 1}}
+      "field": "GeographicDivision", 
+      "type": "ordinal",
+      "scale": {"scheme": "set1"},
+      "legend": {"orient":"bottom"},
+      "title":null}
+   }
 }
