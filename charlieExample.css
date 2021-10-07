@@ -1,37 +1,19 @@
-/*Here is some example CSS by Charlie Meyrick. */
-
 body{
-
-    background-color: #122b39 ;
-    max-width: 450px;
+    background-color: rgb(233, 233, 233);
+    max-width: 500px;
     margin: auto;
 }
 
-h1{
-
-    color: rgb(219, 188, 188);
-    font-family: 'Poppins', sans-serif ;
+h1, h3, p{
+    color:rgb(17, 17, 17);
+    font-family: 'Roboto', sans-serif;
 }
-
-h3{
-    color: #f4c245;
-    font-family: 'Poppins', sans-serif ;
-}
-
-p{font-family: 'Poppins', sans-serif;
-color: white;
-}
-
-
 
 .chart{
-    width: 330px;
-    border-width: 10px;
     background-color: white;
+    width:330px;
+    border-width: 10px;
     border-style: solid;
     border-radius: 5px;
     border-color: white;
-    margin: auto;
-
-
 }
