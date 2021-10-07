@@ -2,6 +2,8 @@
 
 body{
     background-color: snow;
+    max-width: 450px;
+    margin: auto;
 }
 
 h1, h3, p{
