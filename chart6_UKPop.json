@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  
+    "title": {
+      "text": "Population Size 2021",
+      "subtitle":"Source: https://worldpopulationreview.com/countries/cities/united-kingdom",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+  "data": {
+  
+  "values": [
+  {"City": "London", "Population": 7556900}, {"City": "Birmingham", "Population": 984333}, {"City": "Liverpool", "Population": 864122},
+  {"City": "Bristol", "Population": 617280}, {"City": "Cardiff", "Population": 447287}, {"City": "Manchester", "Population": 395515}
+  ]
+  },
+  
+  "height":300,
+  "width": 400,
+  "mark": "bar",
+  "encoding": {
+  "x": {"field": "City", "type": "nominal", "axis": {"labelAngle": 0}},
+  "y": {"field": "Population", "type": "quantitative"},
+  
+      "color": {
+        "field": "City",
+        "type": "nominal",
+        "scale": {"scheme": "teals"},
+        "title": null,
+        "legend": {
+          "orient": "top-left", 
+          "fillColor": "#ffffff"}
+      }
+  }
+  }
