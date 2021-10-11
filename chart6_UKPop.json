@@ -20,7 +20,7 @@
   },
   
   "height":300,
-  "width": 400,
+  "width": 310,
   "mark": "bar",
   "encoding": {
   "x": {"field": "City", "type": "nominal", "axis": {"labelAngle": 0}},
