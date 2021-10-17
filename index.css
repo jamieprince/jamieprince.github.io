@@ -1,19 +1,31 @@
 /* This is my first proper css file */
 
 body{
-    background-color: snow;
-    max-width: 500px;
+    background-color: rgb(55, 75, 51);
+    max-width: 800px;
     margin: auto;
 }
 
 h1{
-    color:rgb(17, 17, 17);
+    color:rgb(203, 221, 224);
 font-family: 'Red Hat Display', sans-serif;
 }
 
 h2, h3, p{
-    color:rgb(17, 17, 17);
+    color:rgb(203, 221, 224);
     font-family: 'Roboto', sans-serif;
+}
+
+.bcontainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;;
+  gap: 30px 30px;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: white;
+  padding: 30px;
+  border-radius: 25px;
 }
 
 .chart-container {
