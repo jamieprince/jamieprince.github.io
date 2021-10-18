@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "title": {
+    "text": "Unemployment Rate UK & Malaysia",
+    "subtitle":"Source: ONS & DOSM",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+   "data": {
+    "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/chart7_unemployment.csv",
+    "format": {"type": "csv"}
+  },  
+  
+  "height":300,
+  "width": 310,
+   
+  "mark": "line",
+
+  
+ 
+  "encoding": {
+
+    "x": {
+      "field": "year",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+
+    "y": {
+      "field": "unemploymentRate",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": true}
+    },
+
+    "color": {
+      "field": "country",
+      "type": "nominal",
+      "scale": {"scheme": "accent"},
+      "title": null,
+      "legend": {
+        "orient": "top-right", 
+        "fillColor": "#ffffff"}
+    }
+}
+}
