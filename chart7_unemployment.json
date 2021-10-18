@@ -42,7 +42,7 @@
       "field": "country",
       "type": "nominal",
       "scale": {"scheme": "accent"},
-      "title": Country,
+      "title": "Country",
       "legend": {
         "orient": "top-right", 
         "fillColor": "#ffffff"}
