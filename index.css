@@ -1,19 +1,28 @@
-/* This is my first proper css file */
-
 body{
     background-color: rgb(55, 75, 51);
-    max-width: 800px;
+    max-width: auto;
     margin: auto;
 }
 
+footer {
+    height: 100px
+}
+
 h1{
-    color:rgb(203, 221, 224);
-font-family: 'Red Hat Display', sans-serif;
+    
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 75px; 
+    font-weight: bold;
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center;
 }
 
 h2, h3, p{
     color:rgb(203, 221, 224);
     font-family: 'Roboto', sans-serif;
+    line-height: 1; 
+    text-align: center;
 }
 
 .bcontainer {
