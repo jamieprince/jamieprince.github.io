@@ -47,27 +47,25 @@
         
  <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 700;">Week 1:</span> Getting Started & Embedding Charts</p>
        
- <container class="bcontainer"> 
-<!--Chart 1 -->
+  <container class="bcontainer"> 
      <p>This first chart tracks Covid-19 cases by UK region.</p>
-<div class="chart" id="chart1">
+     <p>My second chart looks at productivity in the UK</p>
+     <p>This chart on gun deaths in the US is pulled from the Rapid Charts example library.</p>
+   
+ <div class="chart" id="chart1">
       <script>
         var myChart1 = "chart1_covidUKRegions.json";
         vegaEmbed('#chart1', myChart1);
       </script>
             </div>
-    
-<!--Chart 2 -->
-    <p>My second chart looks at productivity in the UK</p>
+   
 <div class="chart" id="chart2">
     <script>
       var myChart2 = "chart2_ukProductivity.json";
       vegaEmbed('#chart2', myChart2);
     </script>
 </div>
-    
-  <!--Chart 3 -->
-    <p>This chart on gun deaths in the US is pulled from the Rapid Charts example library.</p>
+   
 <div class="chart" id="chart3">
     <script>
       var myChart3 = "chart3_gundeathUS.json";
