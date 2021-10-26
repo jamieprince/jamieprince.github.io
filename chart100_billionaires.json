@@ -73,4 +73,45 @@
         "bandPaddingInner": 0.2
       }
     }
+  } 
+    "encoding": {
+  
+      "x": {
+        "field": "Year",
+        "type": "nominal",
+        "title": null,
+        "axis":{
+        "grid": false,
+        "ticks": false,
+        "labelAngle": 45}
+      },
+  
+      "y": {
+        "field": "Total number of",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": true}
+      },
+  
+      "strokeWidth": {
+        "condition": [
+          {
+            "param": "select",
+            "empty": false,
+            "value": 2
+          },
+          {
+            "param": "highlight",
+            "empty": false,
+            "value": 1
+          }
+        ],
+        "value": 0
+      }
+    },
+    "config": {
+      "scale": {
+        "bandPaddingInner": 0.2
+      }
+    }
   }  
