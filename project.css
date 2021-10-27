@@ -1,20 +1,20 @@
 body{
-    background-color: #222629;
-    max-width: 500px;
+    background-color: #A39CB7;
+    max-width: 550px;
     margin: auto;
 }
 
 h1, h3{
-    color:rgb(254, 68, 46);
+    color:#F1F0F4;
     font-family: 'Averia Serif Libre', cursive;
-  font-size: 50px;
+  font-size: 55px;
   text-align: center;
   line-height: 1;
   letter-spacing: -1px;
 }
 
 p{
-    color:rgb(203, 250, 224);
+    color:#F1F0F4;
     font-family: 'Roboto';
 }
 
