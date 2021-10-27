@@ -1,117 +1,76 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
-    "title": {
-      "text": "Number of Billionaires",
-      "subtitle":"Source: Forbes",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
-    },
-    
-     "data": {
-      "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/billionaires.csv",
-      "format": {"type": "csv"}
-    },  
-    
-    "height":300,
-    "width": 310,
-     
-    "params": [
-      {
-        "name": "highlight",
-        "select": {"type": "point", "on": "mouseover"}
-      },
-      {"name": "select", "select": "point"}
-    ],
-    "mark": {
-      "type": "bar",
-      "fill": "#5eb17e",
-      "stroke": "black",
-      "cursor": "pointer"
-    },
-    
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "title": {
+    "text": "Number of Billionaires",
+    "subtitle":"Source: Forbes",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+   "data": {
+    "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/billionaires.csv",
+    "format": {"type": "csv"}
+  },  
+  
+  "height":300,
+  "width": 310,
    
-    "encoding": {
-  
-      "x": {
-        "field": "Year",
-        "type": "nominal",
-        "title": null,
-        "axis":{
-        "grid": false,
-        "ticks": false,
-        "labelAngle": 45}
-      },
-  
-      "y": {
-        "field": "Total number of",
-        "type": "quantitative",
-        "title": null,
-        "axis": {"grid": true}
-      },
-  
-      "strokeWidth": {
-        "condition": [
-          {
-            "param": "select",
-            "empty": false,
-            "value": 2
-          },
-          {
-            "param": "highlight",
-            "empty": false,
-            "value": 1
-          }
-        ],
-        "value": 0
-      }
+  "params": [
+    {
+      "name": "highlight",
+      "select": {"type": "point", "on": "mouseover"}
     },
-    "config": {
-      "scale": {
-        "bandPaddingInner": 0.2
-      }
-    }
-  } 
-    "encoding": {
+    {"name": "select", "select": "point"}
+  ],
+  "mark": {
+    "type": "bar",
+    "fill": "#CCC4E6",
+    "stroke": "#857A99",
+    "cursor": "pointer"
+  },
   
-      "x": {
-        "field": "Year",
-        "type": "nominal",
-        "title": null,
-        "axis":{
-        "grid": false,
-        "ticks": false,
-        "labelAngle": 45}
-      },
-  
-      "y": {
-        "field": "Total number of",
-        "type": "quantitative",
-        "title": null,
-        "axis": {"grid": true}
-      },
-  
-      "strokeWidth": {
-        "condition": [
-          {
-            "param": "select",
-            "empty": false,
-            "value": 2
-          },
-          {
-            "param": "highlight",
-            "empty": false,
-            "value": 1
-          }
-        ],
-        "value": 0
-      }
+ 
+  "encoding": {
+
+    "x": {
+      "field": "Year",
+      "type": "nominal",
+      "title": null,
+      "axis":{
+      "grid": false,
+      "ticks": false,
+      "labelAngle": 45}
     },
-    "config": {
-      "scale": {
-        "bandPaddingInner": 0.2
-      }
+
+    "y": {
+      "field": "Total number of",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": true}
+    },
+
+    "strokeWidth": {
+      "condition": [
+        {
+          "param": "select",
+          "empty": false,
+          "value": 2
+        },
+        {
+          "param": "highlight",
+          "empty": false,
+          "value": 1
+        }
+      ],
+      "value": 0
     }
-  }  
+  },
+  "config": {
+    "scale": {
+      "bandPaddingInner": 0.2
+    }
+  }
+}
