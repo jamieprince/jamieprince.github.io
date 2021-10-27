@@ -1,16 +1,14 @@
 body{
-    background-color: #A39CB7;
+    background-color: #131921;
     max-width: 550px;
     margin: auto;
 }
 
 h1, h3{
-    color:#F1F0F4;
-    font-family: 'Averia Serif Libre', cursive;
-  font-size: 55px;
+font-family: 'Ubuntu', sans-serif;  font-size: 55px;
   text-align: center;
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
 }
 
 p{
