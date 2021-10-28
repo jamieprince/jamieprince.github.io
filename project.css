@@ -5,8 +5,7 @@ body{
 }
 
 h1, h3{
-  font-family: 'PT Sans', sans-serif;  
-  font-size: 55px;
+font-family: 'Ubuntu', sans-serif;  font-size: 55px;
   text-align: center;
   line-height: 1;
   letter-spacing: 1px;
