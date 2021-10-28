@@ -46,7 +46,7 @@
     },
 
     "y": {
-      "field": "Total number of",
+      "field": "Total number of Billionaires",
       "type": "quantitative",
       "title": null,
       "axis": {"grid": true}
