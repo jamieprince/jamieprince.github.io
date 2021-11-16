@@ -18,7 +18,22 @@ h1{
     text-align: center;
 }
 
-h2, h3, p{
+h2{
+    color:rgb(203, 221, 224);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1; 
+    text-align: center;
+}
+
+h3{
+    color:rgb(203, 221, 224);
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    line-height: 1; 
+    text-align: center;
+}
+
+p{
     color:rgb(203, 221, 224);
     font-family: 'Roboto', sans-serif;
     line-height: 1; 
@@ -58,7 +73,7 @@ h2, h3, p{
 }
 
 /* Button Format */
-.button-56 {
+.button-56, .button-1{
     align-items: center;
     margin: 10px;
     background-color: rgb(203, 221, 224);
@@ -101,7 +116,7 @@ h2, h3, p{
 
 .button-56:hover:after {
     transform: translate(0, 0);
-    background: rgb(203, 221, 224);
+    background: rgb(219, 188, 188);
 }
 
 .button-56:active {
