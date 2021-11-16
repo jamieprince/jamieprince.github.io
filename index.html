@@ -7,149 +7,272 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <!--Facebook meta - this comes up when you post a link to the site-->
     <meta property="og:title" content="Jamie Prince">
     <meta property="og:description" content="Data Science Portfolio">
     <meta property="og:image" content="patches.JPG">
     <meta property="og:url" content="https://github.com/jamieprince/jamieprince.github.io/blob/main/index.html">
-    
+
     <!--Title - this is the bit that comes up in the tab-->
     <title>Jamie's Portfolio</title>
-    
+
     <link rel="stylesheet" href="index.css">
 
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
     </style>
 
     <!--The next three lines allow the Vega embed-->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-   
+
 </head>
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
+
 <body>
-  <h1><b><span style= "color:rgb(219, 188, 188)">DATA</span><span style= "color:rgb(203, 221, 224)">SCIENCE 2021</span></b></h1>
+    <h1><b><span style="color:rgb(219, 188, 188)">DATA</span><span style="color:rgb(203, 221, 224)">SCIENCE
+                2021</span></b></h1>
     <h3>by Jamie Guneratnam</h3>
-        <br>
+    <br>
     <div class="wrap">
-    <p class="rubric-launch">To view my personal project, click <a class="textLink" href="project"><span style= "color:rgb(203, 221, 224)">here</span></a>.</p> 
+        <p class="rubric-launch">To view my personal project, click <a class="textLink" href="project"><span
+                    style="color:rgb(203, 221, 224)">here</span></a>.</p>
     </div>
-        <br>
-        <br>
+    <br>
+    <br>
     <h2>PORTFOLIO</h2>
-        
- <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 700;">Week 1:</span> Getting Started & Embedding Charts</p>
-       
-  <container class="bcontainer"> 
-     <p>This first chart tracks Covid-19 cases by UK region.</p>
-     <p>My second chart looks at productivity in the UK</p>
-     <p>This chart on gun deaths in the US is pulled from the Rapid Charts example library.</p>
-   
- <div class="chart" id="chart1">
-      <script>
-        var myChart1 = "chart1_covidUKRegions.json";
-        vegaEmbed('#chart1', myChart1);
-      </script>
-            </div>
-   
-<div class="chart" id="chart2">
-    <script>
-      var myChart2 = "chart2_ukProductivity.json";
-      vegaEmbed('#chart2', myChart2);
-    </script>
-</div>
-   
-<div class="chart" id="chart3">
-    <script>
-      var myChart3 = "chart3_gundeathUS.json";
-      vegaEmbed('#chart3', myChart3);
-    </script>
-</div>
-  </container>
-    
-    <br>
-    <br>
-    
- <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Week 2:</span> Introduction to APIs</p> 
-    <container class="bcontainer"> 
-        
-   <!--Chart 4 -->
-    <p>This fourth chart runs from the UK Government API on Coronavirus.</p>
-    <!--Chart 5 -->
-    <p>This is my fifth chart on completed vacinations, with data hosted on GitHub.</p>
-        
-<div class="chart" id="chart4">
-    <script>
-      var myChart4 = "chart4_NewCases.json";
-      vegaEmbed('#chart4', myChart4);
-    </script>
-</div>
-        
-<div class="chart" id="chart5">
-    <script>
-      var myChart5 = "chart5_VacData.json";
-      vegaEmbed('#chart5', myChart5);
-    </script>
-</div>
-  </container>
-    
-    <br>
-    <br>
-  
-  <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Week 3:</span> JSON Charts - Writing JSON by Hand</p>
-    <container class="bcontainer"
-               
-        <!--Chart 6 -->
-    <p>This sixth chart uses data manually keyed into the JSON format.</p>
-        <p>Chart seven shows data of unemployment rates in the UK taken from the ONS with the added data of unemployment rates in Malaysia taken from the Department of Statistics Malaysia.</p>
-    
-<div class="chart" id="chart6">
-    <script>
-      var myChart6 = "chart6_UKPop.json";
-      vegaEmbed('#chart6', myChart6);
-    </script>
-</div>
-    
-<div class="chart" id="chart7">
-    <script>
-      var myChart7 = "chart7_unemployment.json";
-      vegaEmbed('#chart7', myChart7);
-    </script>
-</div>
-  </container>
-    
+
+    <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 700;">Task 1:</span> Getting Started &
+        Embedding Charts</p>
+
+    <container class="bcontainer">
+        <p>This first chart tracks Covid-19 cases by UK region.</p>
+        <p>My second chart looks at productivity in the UK</p>
+        <p>This chart on gun deaths in the US is pulled from the Rapid Charts example library.</p>
+
+        <div class="chart" id="chart1">
+            <script>
+                var myChart1 = "chart1_covidUKRegions.json";
+                vegaEmbed('#chart1', myChart1);
+            </script>
+        </div>
+
+        <div class="chart" id="chart2">
+            <script>
+                var myChart2 = "chart2_ukProductivity.json";
+                vegaEmbed('#chart2', myChart2);
+            </script>
+        </div>
+
+        <div class="chart" id="chart3">
+            <script>
+                var myChart3 = "chart3_gundeathUS.json";
+                vegaEmbed('#chart3', myChart3);
+            </script>
+        </div>
+    </container>
+
     <br>
     <br>
 
-  <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Week 4:</span> API Driven Charts</p>
-    <container class="bcontainer"
-               
-        <!--Chart 8 -->
-    <p>This chart</p>
-    <p>Chart nine</p>
+    <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 2:</span> Hosting Data</p>
+    <container class="bcontainer">
 
-<div class="chart" id="chart8">
-    <script>
-      var myChart8 = "-";
-      vegaEmbed('#chart8', myChart8);
-    </script>
-</div>
+        <p>This fourth chart runs from the UK Government API on Coronavirus. The fifth chart is on completed covid
+            vacinations, with data hosted on GitHub.</p>
 
-<div class="chart" id="chart9">
-    <script>
-      var myChart9 = "-";
-      vegaEmbed('#chart9', myChart9);
-    </script>
-</div>
-  </container>
+        <div class="chart" id="chart4">
+            <script>
+                var myChart4 = "chart4_NewCases.json";
+                vegaEmbed('#chart4', myChart4);
+            </script>
+        </div>
+
+        <div class="chart" id="chart5">
+            <script>
+                var myChart5 = "chart5_VacData.json";
+                vegaEmbed('#chart5', myChart5);
+            </script>
+        </div>
+    </container>
+
+    <br>
+    <br>
+
+    <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 3:</span> JSON Charts - Writing
+        JSON by Hand</p>
+    <container class="bcontainer">
+
+        <p>This sixth chart uses data manually keyed into the JSON format. Chart seven shows data of unemployment rates
+            in the UK taken from the ONS with the added data of unemployment
+            rates in Malaysia taken from the Department of Statistics Malaysia.</p>
+
+        <div class="chart" id="chart6">
+            <script>
+                var myChart6 = "chart6_UKPop.json";
+                vegaEmbed('#chart6', myChart6);
+            </script>
+        </div>
+
+        <div class="chart" id="chart7">
+            <script>
+                var myChart7 = "chart7_unemployment.json";
+                vegaEmbed('#chart7', myChart7);
+            </script>
+        </div>
+    </container>
+
+    <br>
+    <br>
+
+    <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 4:</span> API Driven Charts</p>
+    <container class="bcontainer">
+
+        <p>Chart eight</p>
+        <p>Chart nine</p>
+
+        <div class="chart" id="chart8">
+            <script>
+                var myChart8 = "-";
+                vegaEmbed('#chart8', myChart8);
+            </script>
+        </div>
+
+        <div class="chart" id="chart9">
+            <script>
+                var myChart9 = "-";
+                vegaEmbed('#chart9', myChart9);
+            </script>
+        </div>
+    </container>
+
+    <br>
+    <br>
+
+    <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 5:</span> Loops and API Fetch
+    </p>
+    <container class="bcontainer">
+
+        <p>Chart ten</p>
+        <p>Chart eleven</p>
+        <p>Chart tweleve</p>
+
+        <div class="chart" id="chart10">
+            <script>
+                var myChart10 = "-";
+                vegaEmbed('#chart10', myChart10);
+            </script>
+        </div>
+
+        <div class="chart" id="chart11">
+            <script>
+                var myChart11 = "-";
+                vegaEmbed('#chart11', myChart11);
+            </script>
+        </div>
+
+        <div class="chart" id="chart12">
+            <script>
+                var myChart12 = "-";
+                vegaEmbed('#chart12', myChart12);
+            </script>
+        </div>
+    </container>
+
+    <br>
+    <br>
+
+    <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 6:</span> Scrapers</p>
+    <container class="bcontainer">
+
+        <p>Chart thirteen</p>
+        <p>Chart fourteen</p>
+
+        <div class="chart" id="chart13">
+            <script>
+                var myChart13 = "-";
+                vegaEmbed('#chart13', myChart13);
+            </script>
+        </div>
+
+        <div class="chart" id="chart14">
+            <script>
+                var myChart14 = "-";
+                vegaEmbed('#chart14', myChart14);
+            </script>
+        </div>
+    </container>
+
+    <br>
+    <br>
+
+    <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 7:</span> Data Stories</p>
+    <container class="bcontainer">
+
+        <p>Chart fifteen</p>
+
+        <div class="chart" id="chart15">
+            <script>
+                var myChart15 = "-";
+                vegaEmbed('#chart15', myChart15);
+            </script>
+        </div>
+    </container>
+
+    <br>
+    <br>
+
+    <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 8:</span> Advanced analytics
+    </p>
+    <container class="bcontainer">
+
+        <p>Chart sixteen and seventeen</p>
+
+        <div class="chart" id="chart16">
+            <script>
+                var myChart16 = "-";
+                vegaEmbed('#chart16', myChart16);
+            </script>
+        </div>
+
+        <div class="chart" id="chart17">
+            <script>
+                var myChart17 = "-";
+                vegaEmbed('#chart17', myChart17);
+            </script>
+        </div>
+    </container>
+
+    <br>
+    <br>
+
+    <p class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 9:</span> Interactivity</p>
+    <container class="bcontainer">
+
+        <p>Chart eighteen and nineteen</p>
+
+        <div class="chart" id="chart18">
+            <script>
+                var myChart16 = "-";
+                vegaEmbed('#chart18', myChart18);
+            </script>
+        </div>
+
+        <div class="chart" id="chart19">
+            <script>
+                var myChart19 = "-";
+                vegaEmbed('#chart19', myChart19);
+            </script>
+        </div>
+    </container>
+
 
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
