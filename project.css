@@ -5,7 +5,7 @@ body{
 }
 
 h1, h3{
-font-family: 'Ubuntu', sans-serif;  font-size: 55px;
+  font-family: 'Ubuntu', sans-serif;  font-size: 55px;
   text-align: center;
   line-height: 1;
   letter-spacing: 1px;
@@ -25,4 +25,61 @@ p{
     border-style: solid;
     border-radius: 5px;
     border-color: white;
+}
+
+/* Button Format */
+.button-56, .button-1{
+    align-items: center;
+    margin: 10px;
+    background-color: #F1F0F4;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #232F3E;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display:inline-block;
+    }
+
+.button-56:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.button-56:hover:after {
+    transform: translate(0, 0);
+    background: #FF9900;
+}
+
+.button-56:active {
+    background-color: #FF9900;
+    outline: 0;
+}
+
+.button-56:hover {
+    outline: 0;
+    background: #F1F0F4;
 }
