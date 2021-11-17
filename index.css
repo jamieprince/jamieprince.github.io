@@ -68,10 +68,6 @@ p{
     padding: 20px;
 }
 
-.chart:not(:last-child) {
-    margin-bottom: 50px;
-}
-
 /* Button Format */
 .button-56, .button-1{
     align-items: center;
