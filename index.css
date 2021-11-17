@@ -9,7 +9,6 @@ footer {
 }
 
 h1{
-    
     font-family: 'Red Hat Display', sans-serif;
     font-size: 75px; 
     font-weight: bold;
@@ -38,10 +37,10 @@ p{
     font-family: 'Roboto', sans-serif;
     line-height: 1; 
     text-align: center;
+    display: inline-block;
 }
 
 /* Chart Format */
-
 .bcontainer {
   display: flex;
   flex-flow: row wrap;
@@ -68,7 +67,9 @@ p{
     padding: 20px;
 }
 
-/* Button Format */
+
+
+/* Button Format - inspired by TobyWinn*/
 .button-56, .button-1{
     align-items: center;
     margin: 10px;
@@ -96,7 +97,7 @@ p{
     }
 
 .button-56:after {
-    background-color: #111;
+    background-color: #1B2519;
     border-radius: 8px;
     content: "";
     display: block;
