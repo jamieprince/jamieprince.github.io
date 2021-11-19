@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-      "text": "Gender Pay Gap for Full-time Employees, by age-group",
+      "text": "Gender Pay Gap in % for Full-time Employees, by age-group",
       "subtitle":"Source: Office for National Statistics – Annual Survey of Hours and Earnings (ASHE)",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
@@ -17,7 +17,7 @@
       {
         "encoding": {
           "x": {"field": "year", "type": "temporal", "title":"Year"},
-          "y": {"field": "paygap", "type": "quantitative", "title":"Gender Pay Gap"},
+          "y": {"field": "paygap", "type": "quantitative", "title":"Gender Pay Gap %"},
           "color": {"field": "age", "type": "nominal", "scale": {"scheme": "set2"}, "title":"Age Group"}
         },
         "layer": [
