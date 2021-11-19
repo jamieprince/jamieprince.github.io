@@ -25,9 +25,9 @@
     </style>
 
     <!--The next three lines allow the Vega embed-->
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
 
 </head>
 
@@ -37,28 +37,41 @@
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
 
 <body>
+    <!-- ////// HEADING/TITLE ////////// -->
+
     <h1><b><span style="color:rgb(219, 188, 188)">DATA</span><span style="color:rgb(203, 221, 224)">SCIENCE
                 2021</span></b></h1>
     <h2>by Jamie Guneratnam</h2>
     <br>
+
+    <!-- ////////// BUTTON  ///////-->
+
     <center>
         <div class="container">
             <button class="button-1" onclick="location.href='https://jamieprince.github.io/'">PORTFOLIO</button>
             <button class="button-56" onclick="location.href='https://jamieprince.github.io/project'">PROJECT</button>
-            <button class="button-56" onclick="location.href='https://github.com/jamieprince/jamieprince.github.io'">GITHUB</button>
+            <button class="button-56"
+                onclick="location.href='https://github.com/jamieprince/jamieprince.github.io'">GITHUB</button>
             <button class="button-56" onclick="location.href='https://rapidcharts.io/datascience'">COURSE</button>
         </div>
     </center>
     <br>
     <br>
 
+    <!-- //////// START OF CHARTS //////// -->
+
     <h3 class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 700;">Task 1:</span> Getting Started &
         Embedding Charts</h3>
 
     <container class="bcontainer">
-        <p>This first chart tracks Covid-19 cases by UK region.</p>
-        <p>My second chart looks at productivity in the UK</p>
-        <p>This chart on gun deaths in the US is pulled from the Rapid Charts example library.</p>
+        <div class="wrap">
+            <p class="rubric-launch">These first three charts were pulled from the <a class="textLink"
+                    href="https://rapidcharts.io/launch" style="color:#FF9A00;"><b>Rapid Charts</b></a>website. The
+                first chart tracks Covid-19 cases by UK
+                region. The second chart looks at productivity in the UK and the third is on gun deaths in the US.</p>
+        </div>
+
+        <br>
 
         <div class="chart" id="chart1">
             <script>
@@ -88,8 +101,11 @@
     <h3 class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 2:</span> Hosting Data</h3>
     <container class="bcontainer">
 
-        <p>This fourth chart runs from the UK Government API on Coronavirus. The fifth chart is on completed covid
+        <p>This fourth chart runs from the UK Government API on Coronavirus while the fifth chart is on completed
+            covid-19
             vacinations, with data hosted on GitHub.</p>
+
+        <br>
 
         <div class="chart" id="chart4">
             <script>
@@ -113,9 +129,11 @@
         Writing JSON by Hand</h3>
     <container class="bcontainer">
 
-        <p>This sixth chart uses data manually keyed into the JSON format. Chart seven shows data of
+        <p>This sixth chart on populations uses data manually keyed into the JSON format. Chart seven shows data on
             unemployment rates in the UK taken from the ONS with the added data of unemployment
             rates in Malaysia taken from the Department of Statistics Malaysia.</p>
+
+        <br>
 
         <div class="chart" id="chart6">
             <script>
@@ -140,7 +158,8 @@
     <container class="bcontainer">
 
         <p>Chart eight</p>
-        <p>Chart nine</p>
+
+        <br>
 
         <div class="chart" id="chart8">
             <script>
@@ -164,13 +183,15 @@
     </h3>
     <container class="bcontainer">
 
-        <p>These three charts were constructed using a loop in Python to batch download data from FRED.
         <div class="wrap">
-            <p class="rubric-launch">The loop used can be found <a class="textLink"
+            <p class="rubric-launch">These three charts were constructed using a loop in Python to batch download the
+                data from FRED. The loop used can be found <a class="textLink"
                     href="https://github.com/jamieprince/jamieprince.github.io/blob/main/LoopFREDdownloader.ipynb"
                     style="color:rgb(219, 188, 188);"><b>here</b></a>.</p>
         </div>
+
         <br>
+
         <div class="chart" id="chart10">
             <script>
                 var myChart10 = "chart200_wealthshare1.json";
@@ -202,10 +223,11 @@
         <div class="wrap">
             <p class="rubric-launch">Chart thirteen was scraped from a <a class="textLink"
                     href="https://en.wikipedia.org/wiki/List_of_countries_by_share_of_income_of_the_richest_one_percent"
-                    style="color:rgb(219, 188, 188);">Wikipedia page</a> containing a list of the world's countries
-                        measuring the income of the richest one percent each.</p>
+                    style="color:rgb(219, 188, 188);">Wikipedia page</a> containing a table of the world's countries
+                measuring the income of the richest one percent each. Whereas chart fourteen</p>
         </div>
-        <p>Chart fourteen</p>
+
+        <br>
 
         <div class="chart" id="chart13">
             <script>
@@ -228,18 +250,28 @@
     <h3 class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 7:</span> Data Stories</h3>
     <container class="bcontainer">
 
-        <p>Chart fifteen</p>
+        <p><b>Talking Economics: An Unfair Crisis.</b> When speaking on inequality, Sarah Smith from the University of
+            Bristol claimed that the pandemic had exacerbated inequalities- focusing particularly on the inequality of
+            gender pay.
+            From chart fifteen, we do observe the first increase in the gender pay gap percentage since 2017. However,
+            the increase to 15.4% from 14.9% in 2020 is still lower than the 17.4% in 2019. Smith also stated that this gap 
+            becomes even worse when women have children.
+            This aligns with data from the ONS showing that the gender pay gap for full-time employees aged 40 years and
+            over is much higher than for employees aged below 40 years. This is shown in chart sixteen.
+        </p>
+
+        <br>
 
         <div class="chart" id="chart15">
             <script>
-                var myChart15 = "chart15_genderpaygap_age.json";
+                var myChart15 = "chart15_genderpaygap_time.json";
                 vegaEmbed('#chart15', myChart15);
             </script>
         </div>
-        
-              <div class="chart" id="chart16">
+
+        <div class="chart" id="chart16">
             <script>
-                var myChart16 = "chart16_genderpaygap_time.json";
+                var myChart16 = "chart16_genderpaygap_age.json";
                 vegaEmbed('#chart16', myChart16);
             </script>
         </div>
@@ -252,7 +284,9 @@
     </h3>
     <container class="bcontainer">
 
-        <p>Chart seventeen</p>
+        <p>Chart seventeen & eighteen here</p>
+
+        <br>
 
         <div class="chart" id="chart17">
             <script>
@@ -260,8 +294,8 @@
                 vegaEmbed('#chart17', myChart17);
             </script>
         </div>
-        
-                <div class="chart" id="chart18">
+
+        <div class="chart" id="chart18">
             <script>
                 var myChart18 = "-";
                 vegaEmbed('#chart18', myChart18);
@@ -275,7 +309,9 @@
     <h3 class="bodyText"><span style="color: rgb(219, 188, 188); font-weight: 1000;">Task 9:</span> Interactivity</h3>
     <container class="bcontainer">
 
-        <p>Chart eighteen and nineteen</p>
+        <p>Chart nineteen and twenty</p>
+
+        <br>
 
         <div class="chart" id="chart19">
             <script>
@@ -283,8 +319,8 @@
                 vegaEmbed('#chart19', myChart19);
             </script>
         </div>
-        
-        
+
+
         <div class="chart" id="chart20">
             <script>
                 var myChart20 = "-";
