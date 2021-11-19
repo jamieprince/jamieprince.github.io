@@ -1,0 +1,87 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Gender Pay Gap for Full-time Employees, by age-group",
+      "subtitle":"Source: Office for National Statistics – Annual Survey of Hours and Earnings (ASHE)",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Figure_3__The_gender_pay_gap_ages.csv"
+    },
+    "width": 400,
+    "height": 300,
+    "layer": [
+      {
+        "encoding": {
+          "x": {"field": "year", "type": "temporal", "title":"Year"},
+          "y": {"field": "paygap", "type": "quantitative", "title":"Gender Pay Gap"},
+          "color": {"field": "age", "type": "nominal", "scale": {"scheme": "set2"}, "title":"Age Group"}
+        },
+        "layer": [
+          {"mark": "line"},
+          {
+            "params": [{
+              "name": "label",
+              "select": {
+                "type": "point",
+                "encodings": ["x"],
+                "nearest": true,
+                "on": "mouseover"
+              }
+            }],
+            "mark": "point",
+            "encoding": {
+              "opacity": {
+                "condition": {
+                  "param": "label",
+                  "empty": false,
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "transform": [{"filter": {"param": "label", "empty": false}}],
+        "layer": [
+          {
+            "mark": {"type": "rule", "color": "gray"},
+            "encoding": {
+              "x": {"type": "temporal", "field": "year", "aggregate": "min"}
+            }
+          },
+          {
+            "encoding": {
+              "text": {"type": "quantitative", "field": "paygap"},
+              "x": {"type": "temporal", "field": "year"},
+              "y": {"type": "quantitative", "field": "paygap"}
+            },
+            "layer": [
+              {
+                "mark": {
+                  "type": "text",
+                  "stroke": "white",
+                  "strokeWidth": 2,
+                  "align": "left",
+                  "dx": 5,
+                  "dy": -5
+                }
+              },
+              {
+                "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+                "encoding": {
+                  "color": {"type": "nominal", "field": "age"}
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
