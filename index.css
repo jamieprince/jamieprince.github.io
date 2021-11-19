@@ -20,15 +20,17 @@ h1{
 h2{
     color:rgb(203, 221, 224);
     font-family: 'Roboto', sans-serif;
-    line-height: 1; 
+    line-height: 0; 
     text-align: center;
 }
 
 h3{
     color:rgb(203, 221, 224);
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+    font-family: 'Red Hat Display', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 20px;
     line-height: 1; 
+    text-transform: uppercase;
     text-align: center;
 }
 
@@ -38,21 +40,23 @@ p{
     line-height: 1; 
     text-align: center;
     display: inline-block;
+    max-width: 960px;
 }
 
-/* Chart Format */
 .bcontainer {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;;
-  gap: 30px 30px;
-  margin-top: 30px;
+  justify-content: center;
+  gap: 25px 25px;
+  margin-top: 25px;
   border-style: solid;
   border-color: rgb(219, 188, 188);
-  padding: 30px;
-  border-radius: 25px;
+  padding: 25px;
+  border-radius: 35px;
+  
 }
 
+/* Chart Format */
 .chart-container {
     display: flex;
     flex-direction: column;
@@ -81,7 +85,7 @@ p{
     cursor: pointer;
     display: flex;
     font-family: 'Red Hat Display', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     height: 48px;
     justify-content: center;
     line-height: 24px;
