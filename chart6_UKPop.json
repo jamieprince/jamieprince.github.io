@@ -29,7 +29,7 @@
       "color": {
         "field": "City",
         "type": "nominal",
-        "scale": {"scheme": "teals"},
+        "scale": {"scheme": "set2"},
         "title": null,
         "legend": {
           "orient": "top-left", 
