@@ -39,7 +39,7 @@ p{
     font-family: 'Roboto', sans-serif;
     line-height: 1; 
     text-align: center;
-    display: inline-block;
+    display: block;
     max-width: 960px;
 }
 
