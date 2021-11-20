@@ -58,7 +58,7 @@ p{
 
 /* Chart Format */
 .chart-container {
-    display: block;
+    display: inline-block;
     flex-direction: column;
     align-items: center;
     padding-top: 70px;
@@ -69,7 +69,7 @@ p{
     background-color: white;
     border-radius: 5px;
     padding: 20px;
-    display: block;
+    display: inline-block;
 }
 
 
