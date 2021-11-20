@@ -3,7 +3,7 @@
   "description": "A simple bar chart with embedded data.",
   
     "title": {
-      "text": "Population Size 2021",
+      "text": "Population Size of UK Cities 2021",
       "subtitle":"Source: https://worldpopulationreview.com/countries/cities/united-kingdom",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
