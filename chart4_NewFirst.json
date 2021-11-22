@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
   "title": {
-    "text": "New Covid-19 Cases",
-    "subtitle":"Three cities of roughly the same population size. Source: https://coronavirus.data.gov.uk/",
+    "text": "New Covid-19 First Dose Vaccination",
+    "subtitle":"by vaccination date. Source: https://coronavirus.data.gov.uk/",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
@@ -11,7 +11,7 @@
   },
   
    "data": {
-    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=ltla&metric=newCasesByPublishDateRollingRate&format=csv",
+    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=utla&metric=newPeopleVaccinatedFirstDoseByVaccinationDate&format=csv",
     "format": {"type": "csv"}
   },
 
@@ -19,7 +19,7 @@
       
       {"filter": {
         "field": "areaName", 
-        "oneOf": ["Leeds", "Cardiff", "City of Edinburgh"]
+        "oneOf": ["Leeds", "Bristol, City of", "City of Edinburgh"]
         }
         }
 
@@ -42,7 +42,7 @@
     },
 
     "y": {
-      "field": "newCasesByPublishDateRollingRate",
+      "field": "newPeopleVaccinatedFirstDoseByVaccinationDate",
       "type": "quantitative",
       "title": null,
       "axis": {"grid": true}
@@ -54,7 +54,7 @@
       "scale": {"scheme": "set2"},
       "title": null,
       "legend": {
-        "orient": "top-left", 
+        "orient": "top-right", 
         "fillColor": "#ffffff"}
     }
 }
