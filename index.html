@@ -229,7 +229,10 @@
             <p class="rubric-launch">Chart thirteen was scraped from a <a class="textLink"
                     href="https://en.wikipedia.org/wiki/List_of_countries_by_share_of_income_of_the_richest_one_percent"
                     style="color:rgb(219, 188, 188);">Wikipedia page</a> containing a table of the world's countries
-                measuring the income of the richest one percent each. Whereas chart fourteen</p>
+                measuring the income of the richest one percent each. Whereas chart fourteen uses data scraped from the <a class="textLink"
+                    href="https://www.bloomberg.com/billionaires/"
+                    style="color:rgb(219, 188, 188);"> Bloomberg Billionaire Index 2021</a>, accessed on November 21, 2021. 
+                    The scraper built in Colab can be found here.</p>
         </div>
 
         <br>
@@ -243,7 +246,7 @@
 
         <div class="chart" id="chart14">
             <script>
-                var myChart14 = "-";
+                var myChart14 = "chart14_net_worth_industry";
                 vegaEmbed('#chart14', myChart14);
             </script>
         </div>
