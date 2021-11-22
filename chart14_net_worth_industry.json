@@ -1,0 +1,34 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "data": {"url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Bloomberg_Billionaires_Index.csv"},
+  
+    "title": {
+      "text": "Net Worth by Industry",
+      "subtitle":"Source: Bloomberg Billionaire Index 2021",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "width": 310,
+    "height": 310,
+  
+    "mark": {
+      "type": "bar", 
+      "tooltip": {"content": "encoding"},
+      "color": "pink"
+  },
+  
+    "encoding": {
+      "x": {
+        "field": "Industry", 
+        "type": "nominal"},
+      "y": {
+        "field": "Total net worth", 
+        "type": "quantitative", 
+        "title":"Net worth in dollars (billions)"}
+    }
+  
+  }
