@@ -17,36 +17,20 @@ p{
     text-align: center;
 }
 
-.container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-    gap: 30px 30px;
-    margin-top: 30px;
-}
-
-.bcontainer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;;
-    gap: 30px 30px;
-    margin-top: 30px;
-    border-style: solid;
-    border-color: white;
-    padding: 30px;
-    border-radius: 25px;
-  }
-
 .chart{
+    width: auto;
+  height: auto;
+    border-width: 5px;
     background-color: white;
     border-style: solid;
-    border-color: white;
-    border-width: 4px;
-    border-radius: 25px;
-    text-align: center;
-    padding: 20px;
-    transition: padding 500ms, border-radius 500ms;
+    border-radius: 10px;
+    border-color: #FF9900;
+    margin: auto;
+    padding: 70px 70px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 /* Button Format */
