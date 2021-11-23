@@ -18,13 +18,19 @@ p{
 }
 
 .chart{
-    width: 330px;
+    width: auto;
+  height: auto;
     border-width: 5px;
     background-color: white;
     border-style: solid;
     border-radius: 10px;
     border-color: #FF9900;
     margin: auto;
+    padding: 70px 70px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 /* Button Format */
