@@ -15,16 +15,16 @@ p{
     color:#F1F0F4;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-
 }
 
 .chart{
+    width: 330px;
+    border-width: 5px;
     background-color: white;
-    width:330px;
-    border-width: 10px;
     border-style: solid;
-    border-radius: 5px;
-    border-color: white;
+    border-radius: 10px;
+    border-color: #FF9900;
+    margin: auto;
 }
 
 /* Button Format */
