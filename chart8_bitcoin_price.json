@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Weekly Bitcoin Price in GBP",
+      "subtitle": "API Source: coinapi.io",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "#000000",
+      "subtitleColor": "#000000"
+      
+    },
+  
+    "data": {
+      "url": "https://rest.coinapi.io/v1/ohlcv/BTC/GBP/history?period_id=7DAY&time_start=2021-01-01T00:00:00&limit=100&include_empty_items=false&apikey=5F99BDFC-891E-4FA6-91E8-BA8D651BFE77"
+    },
+  
+    "height": 300,
+    "width": 310,
+    "mark": {
+      "type": "trail",
+      "point": false,
+      "color": "rosybrown"
+    },
+  
+  
+    "encoding": {
+      "x": {
+        "field": "time_period_start", 
+        "title": null, 
+        "type": "temporal"},
+      "y": {
+        "field": "price_close",
+        "title": "Price (£)",
+        "type": "quantitative"
+            }
+    }
+  }
