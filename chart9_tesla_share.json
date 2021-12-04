@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Tesla Quarterly Earnings Per Share (diluted EPS)",
+        "subtitle": "Last 4 quarters. API Source: finnhub.io",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "data": {
+        "url": "https://finnhub.io/api/v1/stock/earnings?symbol=TSLA&token=c6lo4raad3i9dknhu78g"
+    },
+    "repeat": {
+        "layer": [
+            "actual",
+            "estimate"
+        ]
+    },
+    "spec": {
+        "height": 300,
+        "width": 310,
+        "mark": {
+            "type": "line",
+            "strokeWidth": 2
+        },
+        "encoding": {
+            "x": {
+                "field": "period",
+                "type": "temporal",
+                "title": null
+            },
+            "y": {
+                "field": {
+                    "repeat": "layer"
+                },
+                "type": "quantitative",
+                "title": "Price ($)"
+            },
+            "color": {
+                "datum": {
+                    "repeat": "layer"
+                },
+                "scale": {
+                    "range": [
+                        "firebrick",
+                        "bisque"
+                    ]
+                }
+            }
+        }
+    }
+}
