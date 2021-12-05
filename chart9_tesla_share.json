@@ -46,7 +46,10 @@
                         "firebrick",
                         "bisque"
                     ]
-                }
+                },
+        "legend": {
+          "orient": "top-left", 
+          "fillColor": "#ffffff"}
             }
         }
     }
