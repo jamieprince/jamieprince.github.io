@@ -23,14 +23,14 @@
   "width": 310,
   "mark": "bar",
   "encoding": {
-  "x": {"field": "City", "type": "nominal", "axis": {"labelAngle": 0}},
-  "y": {"field": "Population", "type": "quantitative"},
+  "x": {"field": "City", "type": "nominal", "axis": {"labelAngle": 0},"title": null},
+  "y": {"field": "Population", "type": "quantitative", "title": null},
   
       "color": {
         "field": "City",
         "type": "nominal",
         "scale": {"scheme": "set2"},
-        "title": null,
+        "title": "City",
         "legend": {
           "orient": "top-left", 
           "fillColor": "#ffffff"}
