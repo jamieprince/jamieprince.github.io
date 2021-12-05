@@ -1,19 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-
   "description": "Productivity UK",
-
-   "title": {
+  "title": {
     "text": "UK productivity, 1971-2021",
-    "subtitle":"Labour productivity. Output per hour worked, 2018==100. Source: ONS",
-    "subtitleFontStyle":"italic",
-    "subtitleFontSize":10,
+    "subtitle": "Labour productivity. Output per hour worked, 2018==100. Source: ONS",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
   },
-  
   "data": {
-    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/ukMacro/GI4.DataHub.GrowthInnovationOutputperHour.csv"},
+    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/ukMacro/GI4.DataHub.GrowthInnovationOutputperHour.csv"
+  },
   "height": 300,
   "width": 310,
   "mark": {
@@ -37,7 +35,9 @@
       "field": "Value",
       "type": "quantitative",
       "title": "",
-      "axis": {"grid": false}
+      "axis": {
+        "grid": false
+      }
     }
   }
 }
