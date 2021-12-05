@@ -40,7 +40,7 @@
       "field": "GeographicDivision", 
       "type": "ordinal",
       "scale": {"scheme": "set1"},
-      "legend": {"orient":"bottom"},
+      "legend": {"orient":"top-right"},
       "title":null}
    }
 }
