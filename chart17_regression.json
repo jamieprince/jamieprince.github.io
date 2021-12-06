@@ -4,7 +4,7 @@
   "data": {"url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Gini.csv"},
 
   "title": {
-    "text": "Correlation between Gini Index & Income of the Top 1%",
+    "text": "Linear Regression: Gini Index & Income of the Top 1%",
     "subtitle": "Source: World Bank & UNDP ",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
