@@ -70,6 +70,30 @@ p{
     font-size: 10pxp;
 }
 
+#chart13{
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  transition: padding 500ms, border-radius 500ms;
+  width: 100%;
+}
+
+#chart14{
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  transition: padding 500ms, border-radius 500ms;
+  width: 100%;
+}
+
 
 /* Button Format - inspired by TobyWinn*/
 
