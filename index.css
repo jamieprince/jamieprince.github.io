@@ -80,6 +80,7 @@ p{
   padding: 20px;
   transition: padding 500ms, border-radius 500ms;
   width: 100%;
+  height: 100%;
 }
 
 #chart14{
@@ -92,6 +93,7 @@ p{
   padding: 20px;
   transition: padding 500ms, border-radius 500ms;
   width: 100%;
+  height: 100%;
 }
 
 
