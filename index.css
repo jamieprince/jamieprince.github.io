@@ -1,7 +1,9 @@
 body{
     background-color: rgb(55, 75, 51);
-    max-width: 1920;
-    margin: 1080;
+}
+
+div.content{ 
+    width: 1000px 
 }
 
 footer {
