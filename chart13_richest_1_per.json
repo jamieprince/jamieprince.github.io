@@ -12,7 +12,7 @@
     "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/income_richest_1.csv",
     "format": {"type": "csv"}
   },
-  "height": 350,
+  "height": 300,
   "width": 310,
   "mark": {"type": "area", "point": true},
   "transform": [
