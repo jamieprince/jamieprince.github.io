@@ -1,56 +1,44 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
-    "title": {
-      "text": "Percentage of income of the richest 1%",
-      "subtitle":"Source: World Inequality Database (2020)",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Percentage of income of the richest 1%",
+    "subtitle": "Source: World Inequality Database (2020)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/income_richest_1.csv",
+    "format": {"type": "csv"}
+  },
+  "height": 350,
+  "width": 310,
+  "mark": {"type": "area", "point": true},
+  "transform": [
+    {"calculate": "'http://hdr.undp.org/en/indicators/186106'", "as": "url"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "axis": null,
+      "title": "Country"
     },
-    
-     "data": {
-      "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/income_richest_1.csv",
-      "format": {"type": "csv"}
+    "y": {
+      "field": "% of income of the richest 1%",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": true}
     },
-  
-  
-    
-    "height":350,
-    "width": 310,
-     
-    "mark": {"type": "area", "point": true},
-  
-    "transform": [{
-      "calculate": "'http://hdr.undp.org/en/indicators/186106'", "as": "url"
-    }],
-   
-    "encoding": {
-  
-      "x": {
-        "field": "Country",
-        "type": "nominal",
-        "axis": null,
-        "title": "country"
-      },
-  
-      "y": {
-        "field": "% of income of the richest 1%",
-        "type": "quantitative",
-        "title": null,
-        "axis": {"grid": true}
-            },
-  
-      "color": {
-        "field": "Country",
-        "type": "nominal",
-        "scale": {"scheme": "tableau20"},
-        "title": "Country"
-      },
-          "tooltip": {"field": "Country", "type": "nominal"},
-  
-          "href": {"field": "url", "type": "nominal"}
-  
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {"scheme": "tableau20"},
+      "title": null,
+      "legend": null
+    },
+    "tooltip": {"field": "Country", "type": "nominal"},
+    "href": {"field": "url", "type": "nominal"}
   }
-  }
+}
