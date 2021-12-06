@@ -1,75 +1,65 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A simple bar chart with embedded data.",
-    "title": {
-        "text": "What did America's Richest Study?",
-        "subtitle": "Source: 'The Forbes 400' 2021",
-        "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
-        "anchor": "start",
-        "color": "black"
-    },
-    "data": {
-        "values": [
-            {
-                "Degree": "Business",
-                "Number": 65
-            },
-            {
-                "Degree": "Economics",
-                "Number": 58
-            },
-            {
-                "Degree": "Engineering",
-                "Number": 55
-            },
-            {
-                "Degree": "Computer Science",
-                "Number": 17
-            },
-            {
-                "Degree": "Politics & Government",
-                "Number": 22
-            },
-            {
-                "Degree": "Mathematics",
-                "Number": 18
-            },
-            {
-                "Degree": "Never Attended",
-                "Number": 19
-            },
-            {
-                "Degree": "Dropout",
-                "Number": 37
-            }
-        ]
-    },
-    "height": 300,
-    "width": 310,
-    "mark": "bar",
-    "encoding": {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "data": {"url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Gini.csv"},
+
+  "title": {
+    "text": "Correlation between Gini Index & Income of the Top 1%",
+    "subtitle": "Source: World Bank & UNDP ",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "height": 300,
+  "width": 310,
+  
+  "layer": [
+    {
+      "mark": {"type": "point", "filled": true},
+      
+      "encoding": {
         "x": {
-            "field": "Degree",
-            "type": "ordinal",
-            "sort": null,
-            "axis": {
-                "labelAngle": 90,
-                "labelBaseline": "middle"
-            }
-        },
+          "field": "Richest 1%", 
+          "type": "quantitative",
+          "title": "Income Share Held by Richest 1%"
+          },
+        
         "y": {
-            "field": "Number",
-            "type": "quantitative"
+          "field": "Gini Index", 
+          "type": "quantitative"
+          }
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "firebrick"},
+      "transform": [
+        {"regression": "Richest 1%", "on": "Gini Index"}
+      ],
+      "encoding": {
+        "x": {"field": "Richest 1%", "type": "quantitative"},
+        "y": {
+          "field": "Gini Index", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "Gini Index",
+          "on": "Richest 1%",
+          "params": true
         },
-        "color": {
-            "field": "Degree",
-            "type": "ordinal",
-            "scale": {
-                "scheme": "tableau10"
-            },
-            "title": null,
-            "legend": null
-        }
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "center",
+        "y": -5
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
     }
+  ]
 }
