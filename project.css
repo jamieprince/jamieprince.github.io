@@ -4,6 +4,10 @@ body{
     margin: auto;
 }
 
+footer {
+    height: 100px
+}
+
 h1, h3{
   font-family: 'Ubuntu', sans-serif;  font-size: 55px;
   text-align: center;
