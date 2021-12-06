@@ -11,14 +11,17 @@
     <!--Facebook meta - this comes up when you post a link to the site-->
     <meta property="og:title" content="Jamie Prince">
     <meta property="og:description" content="Data Science Project">
-    <meta property="og:image" content="patches.JPG">
+    <meta property="og:image" content="favicon.jpg">
     <meta property="og:url" content="https://jamieprince.github.io/project">
 
     <!--Title - this is the bit that comes up in the tab-->
     <title>Jamie's Project</title>
+    <link rel="icon" type="image/png" href="favicon.jpg">
 
+    <!--Linking to CSS-->
     <link rel="stylesheet" href="project.css">
 
+    <!--Importing fonts-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
@@ -28,9 +31,12 @@
     </style>
 
     <!--The next three lines allow the Vega embed-->
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    
+    <!--Opens links in new tabs-->
+    <base target="_blank">
 
 
 </head>
@@ -42,16 +48,17 @@
 
 <body>
 
+<!-- ////////// BUTTON  ///////-->
     <center>
         <div class="container">
-            <button class="button-56" onclick="location.href='https://jamieprince.github.io/'">PORTFOLIO</button>
-            <button class="button-1" onclick="location.href='https://jamieprince.github.io/project'">PROJECT</button>
-            <button class="button-56" onclick="location.href='https://github.com/jamieprince/jamieprince.github.io'">GITHUB</button>
-            <button class="button-56" onclick="location.href='https://rapidcharts.io/datascience'">COURSE</button>
+            <button class="button-56" onclick="window.open('https://jamieprince.github.io/','_blank')">PORTFOLIO</button>
+            <button class="button-1" onclick="window.open('https://jamieprince.github.io/project','_blank')">PROJECT</button>
+            <button class="button-56" onclick="window.open('https://github.com/jamieprince/jamieprince.github.io','_blank')">GITHUB</button>
+            <button class="button-56" onclick="window.open('https://rapidcharts.io/datascience','_blank')">COURSE</button>
         </div>
     </center>
     
-   
+<!-- ////// HEADING/TITLE ////////// -->
 <div style='vertical-align:middle; display:inline;'><h1><span style="color:#F1F0F4">how educated are our</span><span style="color:#FF9900">
                     billionaires</span> <img style='vertical-align:middle; height: 55px; width: 34px;' src='question_mark2.png'></b></h1>
 </div>
@@ -59,6 +66,7 @@
             <p><i>The importance of education is unquestionable but does the educational level of not just the
                     individual but the country as a whole play apart in determining our world's wealthiest.</i></p>
 
+<!-- //////// START OF CHARTS //////// -->
             <div class="chart" id="chart100">
                 <script>
                     var myChart100 = "chart100_billionaires.json";
