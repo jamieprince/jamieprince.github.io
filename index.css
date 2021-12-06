@@ -80,7 +80,12 @@ p{
   border-radius: 25px;
   text-align: center;
   padding: 20px;
-  transition: padding 500ms, border-radius 500ms;
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
 }
 
 
