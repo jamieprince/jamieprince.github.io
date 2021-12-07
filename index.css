@@ -74,22 +74,6 @@ p{
     padding-bottom: 70px;
 }
 
-#chart14 #chart16 #chart18{
-  background-color: white;
-  border-style: solid;
-  border-color: white;
-  border-width: 3px;
-  border-radius: 25px;
-  text-align: center;
-  padding: 20px;
-  width: auto;
-  height: auto;
-  margin: auto;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-}
-
 
 /* Button Format - inspired by TobyWinn*/
 
