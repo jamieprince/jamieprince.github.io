@@ -47,7 +47,8 @@ p{
 
 .bcontainer {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
+  align-items:center;
   justify-content: center;
   gap: 25px 25px;
   margin-top: 25px;
@@ -60,16 +61,17 @@ p{
 
 /* Chart Format */
 .chart {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
     display: inline-block;
+}
+
+.chart-container {
+    display: flex;
     align-items: center;
-    justify-content: center;  
-    width: 400px;
-    height: 390px;
-    margin: 10px;
-    padding: 5px;
-    background-color: White;
-    border-radius: 10px;
-    font-size: 10pxp;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 #chart14 #chart16 #chart18{
