@@ -46,6 +46,7 @@ p{
 }
 
 .bcontainer {
+  display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 25px 25px;
