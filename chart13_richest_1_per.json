@@ -35,8 +35,7 @@
       "field": "Country",
       "type": "nominal",
       "scale": {"scheme": "tableau20"},
-      "title": null,
-      "legend": null
+      "title": "Country" 
     },
     "tooltip": {"field": "Country", "type": "nominal"},
     "href": {"field": "url", "type": "nominal"}
