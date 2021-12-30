@@ -1,41 +1,94 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
-    "title": {
-      "text": "Share of Total Net Worth Held by the Top 1%",
-      "subtitle":"Source: Board of Governors of the Federal Reserve System (US)",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "background": "#FFFFFF",
+  "height": 310,
+  "width": "container",
+  "padding": 25,
+  "title": {
+    "text": "Share of Total Net Worth Held by the Top 1%",
+    "subtitle": "Source: Board of Governors of the Federal Reserve System (US), retrieved from FRED",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black",
+    "subtitleColor": "black"
+  },
+  "data": {
+    "name": "myData",
+    "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/data_FRED-WFRBST01134.json",
+    "format": {
+      "type": "json",
+      "property": "observations"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "color": "#424864",
+    "strokeWidth": 2,
+    "opacity": 1
+  },
+  "transform": [
+    {
+      "calculate": "year(datum.date)",
+      "as": "year"
     },
-    
-     "data": {
-      "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/data_FRED-WFRBST01134.json",
-      "format": {"type": "json",
-      "property": "observations"}
-    },  
-    
-    "height":300,
-    "width": 310,
-     
-    "mark": "line",
-   
-    "encoding": {
-  
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "title": null,
-        "axis": {"grid": false}
-      },
-  
-      "y": {
-        "field": "value",
-        "type": "quantitative",
-        "title": null,
-        "axis": {"grid": true}
+    {
+      "filter": "datum.year>minYear"
+    },
+    {
+      "filter": "datum.year<maxYear"
+    }
+  ],
+  "params": [
+    {
+      "name": "minYear",
+      "value": 1989,
+      "bind": {
+        "input": "range",
+        "min": 1989,
+        "max": 2021,
+        "step": 1,
+        "name": "Start Year: "
       }
-  
+    },
+    {
+      "name": "maxYear",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 1989,
+        "max": 2021,
+        "step": 1,
+        "name": "End Year: "
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "grid": true
+      },
+      "scale": {
+        "domain": {
+          "data": "myData",
+          "field": "value"
+        }
+      }
+    }
   }
-  }
+}
