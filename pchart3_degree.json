@@ -1,75 +1,81 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A simple bar chart with embedded data.",
-    "title": {
-        "text": "What did America's Richest Study?",
-        "subtitle": "Source: 'The Forbes 400' 2021",
-        "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
-        "anchor": "start",
-        "color": "black"
-    },
-    "data": {
-        "values": [
-            {
-                "Degree": "Business",
-                "Number": 65
-            },
-            {
-                "Degree": "Economics",
-                "Number": 58
-            },
-            {
-                "Degree": "Engineering",
-                "Number": 55
-            },
-            {
-                "Degree": "Computer Science",
-                "Number": 17
-            },
-            {
-                "Degree": "Politics & Government",
-                "Number": 22
-            },
-            {
-                "Degree": "Mathematics",
-                "Number": 18
-            },
-            {
-                "Degree": "Never Attended",
-                "Number": 19
-            },
-            {
-                "Degree": "Dropout",
-                "Number": 37
-            }
-        ]
-    },
-    "height": 300,
-    "width": 310,
-    "mark": "bar",
-    "encoding": {
-        "x": {
-            "field": "Degree",
-            "type": "ordinal",
-            "sort": null,
-            "axis": {
-                "labelAngle": 90,
-                "labelBaseline": "middle"
-            }
-        },
-        "y": {
-            "field": "Number",
-            "type": "quantitative"
-        },
-        "color": {
-            "field": "Degree",
-            "type": "ordinal",
-            "scale": {
-                "scheme": "tableau10"
-            },
-            "title": null,
-            "legend": null
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "title": {
+    "text": "What did America's Richest Study?",
+    "subtitle": "Source: 'The Forbes 400' 2021",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "values": [
+      {
+        "Degree": "Business",
+        "Number": 65
+      },
+      {
+        "Degree": "Economics",
+        "Number": 58
+      },
+      {
+        "Degree": "Engineering",
+        "Number": 55
+      },
+      {
+        "Degree": "Computer Science",
+        "Number": 17
+      },
+      {
+        "Degree": "Politics & Government",
+        "Number": 22
+      },
+      {
+        "Degree": "Mathematics",
+        "Number": 18
+      },
+      {
+        "Degree": "Never Attended",
+        "Number": 19
+      },
+      {
+        "Degree": "Dropout",
+        "Number": 37
+      }
+    ]
+  },
+  "height": 300,
+  "width": 310,
+  "mark": {
+    "type": "bar",
+    "cursor": "pointer",
+    "tooltip": {
+      "content": "encoding"
     }
+  },
+  "encoding": {
+    "x": {
+      "field": "Degree",
+      "type": "ordinal",
+      "sort": null,
+      "axis": {
+        "labelAngle": 90,
+        "labelBaseline": "middle"
+      }
+    },
+    "y": {
+      "field": "Number",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Degree",
+      "type": "ordinal",
+      "scale": {
+        "scheme": "tableau10"
+      },
+      "title": null,
+      "legend": null
+    }
+  }
 }
