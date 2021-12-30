@@ -1,12 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "autosize": {
-    "type": "fit-x",
-    "contains": "padding"
-  },
+  "autosize": {"type": "fit-x", "contains": "padding"},
   "background": "#FFFFFF",
   "height": 310,
-  "width": "container",
+  "width": 500,
   "padding": 25,
   "title": {
     "text": "Share of Total Net Worth Held by the Top 1%",
@@ -20,28 +17,13 @@
   "data": {
     "name": "myData",
     "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/data_FRED-WFRBST01134.json",
-    "format": {
-      "type": "json",
-      "property": "observations"
-    }
+    "format": {"type": "json", "property": "observations"}
   },
-  "mark": {
-    "type": "line",
-    "color": "#424864",
-    "strokeWidth": 2,
-    "opacity": 1
-  },
+  "mark": {"type": "line", "color": "#424864", "strokeWidth": 2, "opacity": 1},
   "transform": [
-    {
-      "calculate": "year(datum.date)",
-      "as": "year"
-    },
-    {
-      "filter": "datum.year>minYear"
-    },
-    {
-      "filter": "datum.year<maxYear"
-    }
+    {"calculate": "year(datum.date)", "as": "year"},
+    {"filter": "datum.year>minYear"},
+    {"filter": "datum.year<maxYear"}
   ],
   "params": [
     {
@@ -72,23 +54,14 @@
       "field": "date",
       "type": "temporal",
       "title": null,
-      "axis": {
-        "grid": false
-      }
+      "axis": {"grid": false}
     },
     "y": {
       "field": "value",
       "type": "quantitative",
       "title": null,
-      "axis": {
-        "grid": true
-      },
-      "scale": {
-        "domain": {
-          "data": "myData",
-          "field": "value"
-        }
-      }
+      "axis": {"grid": true},
+      "scale": {"domain": {"data": "myData", "field": "value"}}
     }
   }
 }
