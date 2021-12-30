@@ -19,7 +19,8 @@
     "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/data_FRED-WFRBST01134.json",
     "format": {"type": "json", "property": "observations"}
   },
-  "mark": {"type": "line", "color": "#424864", "strokeWidth": 2, "opacity": 1},
+  "mark": {"type": "line", "color": "#424864", "strokeWidth": 2, "opacity": 1, "tooltip": {"content": "encoding"}},
+   
   "transform": [
     {"calculate": "year(datum.date)", "as": "year"},
     {"filter": "datum.year>minYear"},
