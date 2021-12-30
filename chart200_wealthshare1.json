@@ -24,7 +24,8 @@
   "transform": [
     {"calculate": "year(datum.date)", "as": "year"},
     {"filter": "datum.year>minYear"},
-    {"filter": "datum.year<maxYear"}
+    {"filter": "datum.year<maxYear"},
+    {"calculate":"datum.value/100", "as": "percent"}
   ],
   "params": [
     {
@@ -58,11 +59,11 @@
       "axis": {"grid": false}
     },
     "y": {
-      "field": "value",
+      "field": "percent",
       "type": "quantitative",
       "title": null,
-      "axis": {"grid": true},
-      "scale": {"domain": {"data": "myData", "field": "value"}}
+      "axis": {"grid": true, "format":"%"},
+      "scale": {"domain": {"data": "myData", "field": "percent"}}
     }
   }
 }
