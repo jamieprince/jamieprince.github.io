@@ -39,7 +39,7 @@
     "color": {
       "field": "Degree",
       "type": "ordinal",
-      "scale": {"scheme": "yelloworangebrown"},
+      "scale": {"scheme": "blueorange"},
       "title": null,
       "legend": null
     }
