@@ -20,7 +20,7 @@
   ],
   "mark": {
     "type": "bar",
-    "fill": "#424864",
+    "fill": "#556F8F",
     "stroke": "#FF9900",
     "cursor": "pointer",
     "tooltip": {"content": "encoding"}
