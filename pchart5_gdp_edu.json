@@ -1,0 +1,97 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "title": {
+        "text": "GDP per capita and Education Attainment",
+        "subtitle": "From 2015-2020. Sources: World Bank",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "height": 300,
+    "width": 300,
+    "data": {
+        "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/correlation.csv"
+    },
+    "transform": [
+        {
+            "calculate": "datum.Educationalattainment/100",
+            "as": "percent"
+        },
+        {
+            "filter": {
+                "field": "Educationalattainment",
+                "gt": 0
+            }
+        }
+    ],
+    "selection": {
+        "paintbrush": {
+            "type": "multi",
+            "on": "mouseover",
+            "nearest": true
+        },
+        "grid": {
+            "type": "interval",
+            "bind": "scales"
+        }
+    },
+    "mark": {
+        "type": "circle",
+        "opacity": 0.5,
+        "color": "#EC9D3E"
+    },
+    "encoding": {
+        "x": {
+            "field": "GDP per capita",
+            "type": "quantitative",
+            "axis": {
+                "title": "GDP per capita",
+                "grid": false,
+                "tickCount": 10,
+                "labelOverlap": "greedy"
+            }
+        },
+        "y": {
+            "field": "percent",
+            "type": "quantitative",
+            "axis": {
+                "title": "Educational Attainment",
+                "grid": false,
+                "format": "%"
+            }
+        },
+        "size": {
+            "condition": {
+                "selection": "paintbrush",
+                "value": 300,
+                "init": {
+                    "value": 70
+                }
+            },
+            "value": 70
+        },
+        "tooltip": [
+            {
+                "field": "Year",
+                "type": "nominal",
+                "title": "Year"
+            },
+            {
+                "field": "Country",
+                "type": "ordinal",
+                "title": "Country"
+            },
+            {
+                "field": "GDP per capita",
+                "type": "nominal",
+                "title": "GDP per capita"
+            },
+            {
+                "field": "Educationalattainment",
+                "type": "nominal",
+                "title": "Educational attainment at least completed short-cycle tertiary population 25+ total (%) (cumulative)"
+            }
+        ]
+    }
+}
