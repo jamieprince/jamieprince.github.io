@@ -21,20 +21,22 @@ p{
     text-align: center;
 }
 
-.chart{
-    width: auto;
-  height: auto;
-    border-width: 5px;
-    background-color: white;
-    border-style: solid;
+.chart { 
+    width: 400px;
+    height: 390px;
+    margin: 10px;
+    padding: 5px;
+    background-color: White;
+    border: #2a9d8f solid 5px;
     border-radius: 10px;
-    border-color: #FF9900;
-    margin: auto;
-    padding: 70px 70px;
-    display: flex;
-  justify-content: center;
-  align-items: center;
+    font-family: Inter,sans-serif;
+    font-size: 10pxp;
+}
 
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 /* Button Format */
