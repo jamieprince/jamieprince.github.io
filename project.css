@@ -38,9 +38,10 @@ p{
 }
 
 .container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: column;
+  align-items:center;
+  justify-content: center;
 }
 
 /* Button Format */
