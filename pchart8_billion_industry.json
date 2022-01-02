@@ -1,0 +1,67 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Data collected from OECD online data library and cleaned and sorted in excel. Regression chart built using vega-lite library example",
+    "data": {
+        "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Bloomberg_Billionaires_Index.csv"
+    },
+    "title": {
+        "text": "Net Worth by Industry",
+        "subtitle": "Source: Bloomberg Billionaire Index 2021",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "width": 310,
+    "height": 310,
+    "mark": {
+        "type": "bar",
+        "color": "#6BABD0"
+    },
+    "selection": {
+        "Region": {
+            "type": "single",
+            "fields": [
+                "Country / Region"
+            ],
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "United States",
+                    "China",
+                    "India",
+                    "Germany",
+                    "Russian Federation"
+                ],
+                "name": "Pick a country: "
+            }
+        }
+    },
+    "transform": [
+        {
+            "filter": {
+                "selection": "Region"
+            }
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "Industry",
+            "type": "nominal"
+        },
+        "y": {
+            "field": "Total net worth",
+            "type": "quantitative",
+            "title": "Net worth in dollars (billions)"
+        },
+        "tooltip": [
+            {
+                "field": "Total net worth_end",
+                "type": "ordinal",
+                "title": "Cummulative Net Worth",
+                "format": ".2f"
+            }
+        ]
+    }
+}
