@@ -1,0 +1,62 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/chart7.csv"
+    },
+    "transform": [
+        {
+            "calculate": "datum.__count_start/datum.__count_end",
+            "as": "percent"
+        }
+    ],
+    "width": 310,
+    "height": 310,
+    "title": {
+        "text": "Level of Education of the Richest 2021",
+        "subtitle": "Source: Bloomberg & Forbes",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "country",
+            "type": "nominal",
+            "title": "Top 5 Country's with the Highest Number of Billionaires"
+        },
+        "y": {
+            "aggregate": "count",
+            "type": "quantitative",
+            "title": "Number of Billionaires"
+        },
+        "color": {
+            "field": "undergrad",
+            "title": "Number of Billionaires",
+            "type": "nominal",
+            "scale": {
+                "domain": [
+                    "yes",
+                    "no"
+                ],
+                "range": [
+                    "#AFD3E6",
+                    "#232F3E"
+                ]
+            }
+        },
+        "tooltip": [
+            {
+                "field": "undergrad",
+                "type": "ordinal",
+                "title": "Has a obtained at least a degree"
+            },
+            {
+                "field": "__count",
+                "type": "nominal",
+                "title": "Number of Billionaires"
+            }
+        ]
+    }
+}
