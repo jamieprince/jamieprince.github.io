@@ -8,8 +8,8 @@
     "anchor": "start",
     "color": "black"
   },
-  "height": 300,
-  "width": 300,
+  "height": 100,
+  "width": 100,
   "data": {
     "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/correlation.csv"
   },
