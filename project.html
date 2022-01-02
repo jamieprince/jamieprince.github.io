@@ -31,10 +31,10 @@
     </style>
 
     <!--The next three lines allow the Vega embed-->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
     <!--Opens links in new tabs-->
     <base target="_blank">
 
@@ -43,124 +43,156 @@
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
+<!--Wordcount:  -->
+<!-- Data files for each chart are in my github repository- most of which are linked. -->
+<!-- chart files are named 'pchart(number)' in the main Github repository -->
+<!-- the "chart 2" class displays charts on the right and "chart 3" class displays charts on the left on computer screen-->
+
 
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
 
 <body>
 
-<!-- ////////// BUTTON  ///////-->
+    <!-- ////////// BUTTON  ///////-->
     <center>
         <div class="container">
-            <button class="button-56" onclick="window.open('https://jamieprince.github.io/','_blank')">PORTFOLIO</button>
-            <button class="button-1" onclick="window.open('https://jamieprince.github.io/project','_blank')">PROJECT</button>
-            <button class="button-56" onclick="window.open('https://github.com/jamieprince/jamieprince.github.io','_blank')">GITHUB</button>
-            <button class="button-56" onclick="window.open('https://rapidcharts.io/datascience','_blank')">COURSE</button>
+            <button class="button-56"
+                onclick="window.open('https://jamieprince.github.io/','_blank')">PORTFOLIO</button>
+            <button class="button-1"
+                onclick="window.open('https://jamieprince.github.io/project','_blank')">PROJECT</button>
+            <button class="button-56"
+                onclick="window.open('https://github.com/jamieprince/jamieprince.github.io','_blank')">GITHUB</button>
+            <button class="button-56"
+                onclick="window.open('https://rapidcharts.io/datascience','_blank')">COURSE</button>
         </div>
     </center>
-    
-<!-- ////// HEADING/TITLE ////////// -->
-<div style='vertical-align:middle; display:inline;'><h1><span style="color:#F1F0F4">how educated are our</span><span style="color:#FF9900">
-                    billionaires</span> <img style='vertical-align:middle; height: 55px; width: 34px;' src='question_mark2.png'></b></h1>
-</div>
 
-            <p><i>The importance of education is unquestionable but does the educational level of not just the
-                    individual but the country as a whole play a part in determining our world's wealthiest.</i></p>
-
-<!-- //////// START OF CHARTS //////// -->
-
-<div class="container">
-    
-<div class="chart" id="chart100">
-<script>
-    var myChart100 = "pchart1_billionaires.json";
-    vegaEmbed('#chart100', myChart100);
-</script>
-</div>
-    
+    <!-- ////// HEADING/TITLE ////////// -->
+    <div style='vertical-align:middle; display:inline;'>
+        <h1><span style="color:#F1F0F4">how educated are our</span><span style="color:#FF9900">
+                billionaires</span> <img style='vertical-align:middle; height: 55px; width: 34px;'
+                src='question_mark2.png'></b></h1>
     </div>
+
+    <p><i>The importance of education is unquestionable but does the educational level of not just the
+            individual but the country as a whole play a part in determining our world's wealthiest.</i></p>
+
+    <!-- //////// START OF CHARTS //////// -->
+
+    <!-- //////// CHART 1 //////// -->
     <div class="container">
-   <a class="codeButton" href="https://en.wikipedia.org/wiki/The_World%27s_Billionaires">Source</a>
-   <a class="codeButton" href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/billionaires.csv">Data</a>
-   <a class="codeButton" href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart1_billionaires.json">Code</a>
-</div>
 
-    
-
-    <div class="container">
-<div class="chart" id="chart200">
-<script>
-    var myChart200 = "pchart2_wealthshare1.json";
-    vegaEmbed('#chart200', myChart200);
-</script>
-</div>
-
-    </div>
-   <a class="codeButton" href="https://fred.stlouisfed.org/series/WFRBST01134">Source</a>
-   <a class="codeButton" href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/data_FRED-WFRBST01134.json">Data</a>
-   <a class="codeButton" href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart2_wealthshare1.json">Code</a>
-        
-
-        <div class="container">
-<div class="chart" id="chart300">
-<script>
-    var myChart300 = "pchart3_degree.json";
-    vegaEmbed('#chart300', myChart300);
-</script>
-</div>
-
+        <div class="chart" id="chart1">
+            <script>
+                var myChart1 = "pchart1_billionaires.json";
+                vegaEmbed('#chart1', myChart1);
+            </script>
         </div>
-<div class="container">
-   <a class="codeButton" href="https://www.forbes.com/sites/mattdurot/2021/10/08/want-to-be-a-billionaire-these-are-the-most-popular-majors-of-the-richest-americans/?sh=6df8ddc626ef">Source</a>
-   <a class="codeButton" href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart3_degree.json">Code</a>
-</div>
-
-<div class="container">
-
-    <div class="chart" id="chart400">
-        <script>
-            var myChart400 = "pchart4_bil_edu.json";
-            vegaEmbed('#chart400', myChart400);
-        </script>
     </div>
-    
-   <a class="codeButton" href="https://fred.stlouisfed.org/series/WFRBST01134">Source</a>
-   <a class="codeButton" href="https://github.com/jamieprince/jamieprince.github.io/blob/main/data_FRED-WFRBST01134.json">Data</a>
-   <a class="codeButton" href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart2_wealthshare1.json">Code</a>
-
-    <div class="chart" id="chart500">
-        <script>
-            var myChart500 = "pchart5_gdp_edu.json";
-            vegaEmbed('#chart500', myChart500);
-        </script>
+    <div class="container">
+        <a class="codeButton" href="https://en.wikipedia.org/wiki/The_World%27s_Billionaires">Source</a>
+        <a class="codeButton"
+            href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/billionaires.csv">Data</a>
+        <a class="codeButton"
+            href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart1_billionaires.json">Code</a>
     </div>
 
-    <div class="chart" id="chart600">
-        <script>
-            var myChart600 = "pchart6_gdp_bil.json";
-            vegaEmbed('#chart600', myChart600);
-        </script>
+    <!-- //////// CHART 2 //////// -->
+    <div class="container">
+        <div class="chart" id="chart2">
+            <script>
+                var myChart2 = "pchart2_wealthshare1.json";
+                vegaEmbed('#chart2', myChart2);
+            </script>
+        </div>
     </div>
-    
-</div>
-
- <div class="chart" id="chart700">
-        <script>
-            var myChart700 = "pchart7_billion_yesno.json";
-            vegaEmbed('#chart700', myChart700);
-        </script>
-    </div>
-
-   <a class="codeButton" href="https://www.bloomberg.com/billionaires/">Source</a>
-   <a class="codeButton" href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/chart7.csv">Data</a>
-   <a class="codeButton" href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart7_billion_yesno.json">Code</a>
-
-<div class="chart" id="chart800">
-        <script>
-            var myChart800 = "pchart8_billion_industry.json";
-            vegaEmbed('#chart800', myChart800);
-        </script>
+    <div class="container">
+        <a class="codeButton" href="https://fred.stlouisfed.org/series/WFRBST01134">Source</a>
+        <a class="codeButton"
+            href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/data_FRED-WFRBST01134.json">Data</a>
+        <a class="codeButton"
+            href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart2_wealthshare1.json">Code</a>
     </div>
 
-   <a class="codeButton" href="https://www.bloomberg.com/billionaires/">Source</a>
-   <a class="codeButton" href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Bloomberg_Billionaires_Index.csv">Data</a>
-   <a class="codeButton" href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart8_billion_industry.json">Code</a>
+    <!-- //////// CHART 3 //////// -->
+    <div class="container">
+        <div class="chart" id="chart3">
+            <script>
+                var myChart300 = "pchart3_degree.json";
+                vegaEmbed('#chart3', myChart3);
+            </script>
+        </div>
+    </div>
+    <div class="container">
+        <a class="codeButton"
+            href="https://www.forbes.com/sites/mattdurot/2021/10/08/want-to-be-a-billionaire-these-are-the-most-popular-majors-of-the-richest-americans/?sh=6df8ddc626ef">Source</a>
+        <a class="codeButton"
+            href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart3_degree.json">Code</a>
+    </div>
+
+    <!-- //////// CHART 4 //////// -->
+    <div class="container">
+        <div class="chart" id="chart4">
+            <script>
+                var myChart4 = "pchart4_bil_edu.json";
+                vegaEmbed('#chart4', myChart4);
+            </script>
+        </div>
+
+        <!-- //////// CHART 5 //////// -->
+        <div class="chart" id="chart5">
+            <script>
+                var myChart5 = "pchart5_gdp_edu.json";
+                vegaEmbed('#chart5', myChart5);
+            </script>
+        </div>
+
+        <!-- //////// CHART 6 //////// -->
+        <div class="chart" id="chart6">
+            <script>
+                var myChart6 = "pchart6_gdp_bil.json";
+                vegaEmbed('#chart6', myChart6);
+            </script>
+        </div>
+    </div>
+    <div class="container">
+        <a class="codeButton"
+            href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/correlation.csv">Data</a>
+        <a class="codeButton"
+            href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart4_bil_edu.json">Code</a>
+    </div>
+
+    <!-- //////// CHART 7 //////// -->
+    <div class="container">
+        <div class="chart" id="chart7">
+            <script>
+                var myChart7 = "pchart7_billion_yesno.json";
+                vegaEmbed('#chart7', myChart7);
+            </script>
+        </div>
+    </div>
+    <div class="container">
+        <a class="codeButton" href="https://www.bloomberg.com/billionaires/">Source</a>
+        <a class="codeButton"
+            href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/chart7.csv">Data</a>
+        <a class="codeButton"
+            href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart7_billion_yesno.json">Code</a>
+    </div>
+
+    <!-- //////// CHART 8 //////// -->
+    <div class="container">
+        <div class="chart" id="chart8">
+            <script>
+                var myChart8 = "pchart8_billion_industry.json";
+                vegaEmbed('#chart8', myChart8);
+            </script>
+        </div>
+    </div>
+    <div class="container">
+        <a class="codeButton" href="https://www.bloomberg.com/billionaires/">Source</a>
+        <a class="codeButton"
+            href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Bloomberg_Billionaires_Index.csv">Data</a>
+        <a class="codeButton"
+            href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart8_billion_industry.json">Code</a>
+    </div>
+</body>
