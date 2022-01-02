@@ -28,7 +28,7 @@
     },
     "mark": {
         "type": "line",
-        "color": "#424864",
+        "color": "#FF9900",
         "strokeWidth": 2,
         "opacity": 1,
         "cursor": "pointer"
