@@ -1,69 +1,113 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "autosize": {"type": "fit-x", "contains": "padding"},
-  "background": "#FFFFFF",
-  "height": 310,
-  "width": 500,
-  "padding": 25,
-  "title": {
-    "text": "Share of Total Net Worth Held by the Top 1%",
-    "subtitle": "Source: Board of Governors of the Federal Reserve System (US), retrieved from FRED",
-    "subtitleFontStyle": "italic",
-    "subtitleFontSize": 10,
-    "anchor": "start",
-    "color": "black",
-    "subtitleColor": "black"
-  },
-  "data": {
-    "name": "myData",
-    "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/data_FRED-WFRBST01134.json",
-    "format": {"type": "json", "property": "observations"}
-  },
-  "mark": {"type": "line", "color": "#424864", "strokeWidth": 2, "opacity": 1, "tooltip": {"content": "encoding"}},
-   
-  "transform": [
-    {"calculate": "year(datum.date)", "as": "year"},
-    {"filter": "datum.year>minYear"},
-    {"filter": "datum.year<maxYear"},
-    {"calculate":"datum.value/100", "as": "percent"}
-  ],
-  "params": [
-    {
-      "name": "minYear",
-      "value": 1989,
-      "bind": {
-        "input": "range",
-        "min": 1989,
-        "max": 2021,
-        "step": 1,
-        "name": "Start Year: "
-      }
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Data collected from OECD online data library and cleaned and sorted in excel. Regression chart built using vega-lite library example",
+    "autosize": {
+        "type": "fit-x",
+        "contains": "padding"
     },
-    {
-      "name": "maxYear",
-      "value": 2021,
-      "bind": {
-        "input": "range",
-        "min": 1989,
-        "max": 2021,
-        "step": 1,
-        "name": "End Year: "
-      }
-    }
-  ],
-  "encoding": {
-    "x": {
-      "field": "date",
-      "type": "temporal",
-      "title": null,
-      "axis": {"grid": false}
+    "background": "#FFFFFF",
+    "height": 310,
+    "width": 500,
+    "padding": 25,
+    "title": {
+        "text": "Share of Total Net Worth Held by the Top 1%",
+        "subtitle": "Source: Board of Governors of the Federal Reserve System (US), retrieved from FRED",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black",
+        "subtitleColor": "black"
     },
-    "y": {
-      "field": "percent",
-      "type": "quantitative",
-      "title": null,
-      "axis": {"grid": true, "format":"%"},
-      "scale": {"domain": {"data": "myData", "field": "percent"}}
+    "data": {
+        "name": "myData",
+        "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/data_FRED-WFRBST01134.json",
+        "format": {
+            "type": "json",
+            "property": "observations"
+        }
+    },
+    "mark": {
+        "type": "line",
+        "color": "#424864",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "cursor": "pointer"
+    },
+    "transform": [
+        {
+            "calculate": "year(datum.date)",
+            "as": "year"
+        },
+        {
+            "filter": "datum.year>minYear"
+        },
+        {
+            "filter": "datum.year<maxYear"
+        },
+        {
+            "calculate": "datum.value/100",
+            "as": "percent"
+        }
+    ],
+    "params": [
+        {
+            "name": "minYear",
+            "value": 1989,
+            "bind": {
+                "input": "range",
+                "min": 1989,
+                "max": 2021,
+                "step": 1,
+                "name": "Start Year: "
+            }
+        },
+        {
+            "name": "maxYear",
+            "value": 2021,
+            "bind": {
+                "input": "range",
+                "min": 1989,
+                "max": 2021,
+                "step": 1,
+                "name": "End Year: "
+            }
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "date",
+            "type": "temporal",
+            "title": null,
+            "axis": {
+                "grid": false
+            }
+        },
+        "y": {
+            "field": "percent",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+                "grid": true,
+                "format": "%"
+            },
+            "scale": {
+                "domain": {
+                    "data": "myData",
+                    "field": "percent"
+                }
+            }
+        },
+        "tooltip": [
+            {
+                "field": "year",
+                "type": "nominal",
+                "title": "Year"
+            },
+            {
+                "field": "value",
+                "type": "quantitative",
+                "title": "Percentage"
+            }
+        ]
     }
-  }
 }
