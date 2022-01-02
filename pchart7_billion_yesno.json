@@ -1,13 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  
-  "data": {"url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/chart7.csv"},
-
-  "transform": [
-    {"calculate": "datum.__count_start/datum.__count_end", "as": "percent"}
-  ],
-
- "width": 310,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/chart7.csv"
+  },
+  "width": 310,
   "height": 310,
   "title": {
     "text": "Tertiary Education and the Richest in 2021",
@@ -23,7 +19,7 @@
       "field": "country",
       "type": "nominal",
       "scale": {
-        "domain": ["United States", "China", "India", "Germany", "Russia"]
+        "domain": ["United States", "China", "India", "Germany", "Russia", "Women"]
       },
       "title": "Top 5 Country's with the Highest Number of Billionaires"
     },
@@ -33,22 +29,20 @@
       "title": "Number of Billionaires",
       "scale": {"domain": [0, 16]}
     },
-
     "color": {
       "field": "undergrad",
       "title": "Completed Tertiary Education",
       "type": "nominal",
-      "scale": {
-        "domain": ["yes", "no"],
-        "range": ["#FF9900", "#232F3E"]
-      },
+      "scale": {"domain": ["yes", "no"], "range": ["#FF9900", "#232F3E"]},
       "legend": {"orient": "top-right"}
-
     },
     "tooltip": [
-
-      {"field": "undergrad", "type": "ordinal", "title": "Has a obtained at least a degree"},
-      {"field": "__count", "type": "nominal", "title": "Number of Billionaires"}]
+      {
+        "field": "undergrad",
+        "type": "ordinal",
+        "title": "Has a obtained at least a degree"
+      },
+      {"field": "__count", "type": "nominal", "title": "Number of Billionaires"}
+    ]
   }
-        
 }
