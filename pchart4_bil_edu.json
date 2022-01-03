@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Scatterplot with correlation between education attainment and no of billionaires",
   "title": {
     "text": null,
     "subtitle": null,
