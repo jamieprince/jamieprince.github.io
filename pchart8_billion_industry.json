@@ -1,11 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Data collected from OECD online data library and cleaned and sorted in excel. Regression chart built using vega-lite library example",
+    "description": "Data collected from the Bloomberg Billionaire Index and cleaned and sorted in pyhton.",
     "data": {
         "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Bloomberg_Billionaires_Index.csv"
     },
     "title": {
-        "text": "Net Worth by Industry",
+        "text": "Chart 5: Net Worth by Industry",
         "subtitle": "Source: Bloomberg Billionaire Index 2021",
         "subtitleFontStyle": "italic",
         "subtitleFontSize": 10,
