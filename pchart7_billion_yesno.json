@@ -1,12 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "interactive bar chart",
   "data": {
     "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/chart7.csv"
   },
   "width": 310,
   "height": 310,
   "title": {
-    "text": "Tertiary Education and the Richest in 2021",
+    "text": "Chart : Tertiary Education and the Richest of 2021",
     "subtitle": "Source: Bloomberg & Forbes",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
