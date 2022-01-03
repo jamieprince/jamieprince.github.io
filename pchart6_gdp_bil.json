@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "title": {
-        "text": "No of billionaires and GDP per capita",
-        "subtitle": "From 2015-2020. Sources: Forbes & World Bank",
+        "text": null,
+        "subtitle": null,
         "subtitleFontStyle": "italic",
         "subtitleFontSize": 10,
         "anchor": "start",
