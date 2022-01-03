@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Data collected from OECD online data library and cleaned and sorted in excel. Regression chart built using vega-lite library example",
+    "description": "Data collected from FRED. Interactive chart with slider to view data from 1989 to 2021",
     "autosize": {
         "type": "fit-x",
         "contains": "padding"
