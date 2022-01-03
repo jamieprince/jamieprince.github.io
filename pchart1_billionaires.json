@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "An interactive bar chart showing the total number of billionaires from 2008 to 2021."
+  "description": "An interactive bar chart showing the total number of billionaires from 2008 to 2021.",
   "title": {
     "text": "Chart 1: Number of Billionaires",
     "subtitle": "Source: Forbes",
