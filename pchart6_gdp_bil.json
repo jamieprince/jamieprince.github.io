@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "scatterplot showing correlation between GDP per capita and the no of billionaires",
     "title": {
         "text": null,
         "subtitle": null,
