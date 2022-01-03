@@ -10,7 +10,7 @@
     "width": 500,
     "padding": 25,
     "title": {
-        "text": "Share of Total Net Worth Held by the Top 1%",
+        "text": "Chart 2: Share of Total Net Worth Held by the Top 1%",
         "subtitle": "Source: Board of Governors of the Federal Reserve System (US), retrieved from FRED",
         "subtitleFontStyle": "italic",
         "subtitleFontSize": 10,
