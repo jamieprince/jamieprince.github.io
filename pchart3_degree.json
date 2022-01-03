@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A simple bar chart with embedded data.",
+  "description": "A interactive bar chart with inline data.",
   "title": {
-    "text": "What did America's Richest Study?",
+    "text": "Chart 3: What did America's Richest Study?",
     "subtitle": "Source: 'The Forbes 400' 2021",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
