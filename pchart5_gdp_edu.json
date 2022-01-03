@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "correlation between GDP per capita and education attainment",
     "title": {
         "text": null,
         "subtitle": null,
