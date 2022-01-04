@@ -1,98 +1,95 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "description": "correlation between GDP per capita and education attainment",
-    "title": {
-        "text": null,
-        "subtitle": null,
-        "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
-        "anchor": "start",
-        "color": "black"
-    },
-    "height": 150,
-    "width": 150,
-    "data": {
-        "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/correlation.csv"
-    },
-    "transform": [
-        {
-            "calculate": "datum.Educationalattainment/100",
-            "as": "percent"
-        },
-        {
-            "filter": {
-                "field": "Educationalattainment",
-                "gt": 0
-            }
-        }
-    ],
-    "selection": {
-        "paintbrush": {
-            "type": "multi",
-            "on": "mouseover",
-            "nearest": true
-        },
-        "grid": {
-            "type": "interval",
-            "bind": "scales"
-        }
-    },
-    "mark": {
-        "type": "circle",
-        "opacity": 0.5,
-        "color": "#EC9D3E"
-    },
-    "encoding": {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "correlation between GDP per capita and education attainment",
+  "title": {
+    "text": null,
+    "subtitle": null,
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "height": 150,
+  "width": 150,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/correlation.csv"
+  },
+  "transform": [
+    {"calculate": "datum.Educationalattainment/100", "as": "percent"},
+    {"filter": {"field": "Educationalattainment", "gt": 0}}
+  ],
+  "layer": [
+    {
+      "selection": {
+        "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+        "grid": {"type": "interval"}
+      },
+      "mark": {"type": "point", "opacity": 0.5, "color": "#EC9D3E"},
+      "encoding": {
         "x": {
-            "field": "GDP per capita",
-            "type": "quantitative",
-            "axis": {
-                "title": "GDP per capita",
-                "grid": false,
-                "tickCount": 10,
-                "labelOverlap": "greedy"
-            }
+          "field": "GDP per capita",
+          "type": "quantitative",
+          "axis": {
+            "title": "GDP per capita",
+            "grid": false,
+            "tickCount": 10,
+            "labelOverlap": "greedy"
+          }
         },
         "y": {
-            "field": "percent",
-            "type": "quantitative",
-            "axis": {
-                "title": "Educational Attainment",
-                "grid": false,
-                "format": "%"
-            }
+          "field": "percent",
+          "type": "quantitative",
+          "axis": {
+            "title": "Educational Attainment",
+            "grid": false,
+            "format": "%"
+          }
         },
         "size": {
-            "condition": {
-                "selection": "paintbrush",
-                "value": 300,
-                "init": {
-                    "value": 70
-                }
-            },
-            "value": 70
+          "condition": {
+            "selection": "paintbrush",
+            "value": 200,
+            "init": {"value": 30}
+          },
+          "value": 30
         },
         "tooltip": [
-            {
-                "field": "Year",
-                "type": "nominal",
-                "title": "Year"
-            },
-            {
-                "field": "Country",
-                "type": "ordinal",
-                "title": "Country"
-            },
-            {
-                "field": "GDP per capita",
-                "type": "nominal",
-                "title": "GDP per capita"
-            },
-            {
-                "field": "Educationalattainment",
-                "type": "nominal",
-                "title": "Educational attainment at least completed short-cycle tertiary population 25+ total (%) (cumulative)"
-            }
+          {"field": "Year", "type": "nominal", "title": "Year"},
+          {"field": "Country", "type": "ordinal", "title": "Country"},
+          {
+            "field": "GDP per capita",
+            "type": "nominal",
+            "title": "GDP per capita"
+          },
+          {
+            "field": "Educationalattainment",
+            "type": "nominal",
+            "title": "Educational attainment at least completed short-cycle tertiary population 25+ total (%) (cumulative)"
+          }
         ]
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "#347DB6", "size": 2},
+      "transform": [{"regression": "GDP per capita", "on": "percent"}],
+      "encoding": {
+        "x": {"field": "GDP per capita", "type": "quantitative"},
+        "y": {"field": "percent", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [
+        {"regression": "GDP per capita", "on": "percent", "params": true},
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
     }
+  ]
 }
