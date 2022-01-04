@@ -18,65 +18,72 @@
     {"calculate": "datum.Educationalattainment/100", "as": "percent"},
     {"filter": {"field": "Educationalattainment", "gt": 0}}
   ],
-    
-    "layer": [
+  "layer": [
     {
-  "selection": {
-    "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
-    "grid": {"type": "interval"}
-  },
-  "mark": {"type": "point", "opacity": 0.5, "color": "#C96E11"},
-  "encoding": {
-    "x": {
-      "field": "Number of Billionaires",
-      "type": "quantitative",
-      "scale": {"domain": [-50, 650]},
-      "axis": {
-        "title": "Number of Billionaires",
-        "grid": false,
-        "tickCount": 8
+      "selection": {
+        "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+        "grid": {"type": "interval"}
+      },
+      "mark": {"type": "point", "opacity": 0.5, "color": "#C96E11"},
+      "encoding": {
+        "y": {
+          "field": "Number of Billionaires",
+          "type": "quantitative",
+          "scale": {"domain": [-50, 650]},
+          "axis": {
+            "title": "Number of Billionaires",
+            "grid": false,
+            "tickCount": 8
+          }
+        },
+        "x": {
+          "field": "percent",
+          "type": "quantitative",
+          "axis": {
+            "title": "Educational Attainment",
+            "grid": false,
+            "format": "%"
+          }
+        },
+        "size": {
+          "condition": {
+            "selection": "paintbrush",
+            "value": 150,
+            "init": {"value": 30}
+          },
+          "value": 30
+        },
+        "tooltip": [
+          {"field": "Year", "type": "nominal", "title": "Year"},
+          {"field": "Country", "type": "ordinal", "title": "Country"},
+          {
+            "field": "Number of Billionaires",
+            "type": "nominal",
+            "title": "No of Billionaires"
+          },
+          {
+            "field": "Educationalattainment",
+            "type": "nominal",
+            "title": "Educational attainment at least completed short-cycle tertiary population 25+ total (%) (cumulative)"
+          }
+        ]
       }
     },
-    "y": {
-      "field": "percent",
-      "type": "quantitative",
-      "axis": {"title": "Educational Attainment", "grid": false, "format": "%"}
-    },
-    "size": {
-      "condition": {
-        "selection": "paintbrush",
-        "value": 150,
-        "init": {"value": 30}
-      },
-      "value": 30
-    },
-    "tooltip": [
-      {"field": "Year", "type": "nominal", "title": "Year"},
-      {"field": "Country", "type": "ordinal", "title": "Country"},
-      {
-        "field": "Number of Billionaires",
-        "type": "nominal",
-        "title": "No of Billionaires"
-      },
-      {
-        "field": "Educationalattainment",
-        "type": "nominal",
-        "title": "Educational attainment at least completed short-cycle tertiary population 25+ total (%) (cumulative)"
-      }
-    ]
-  }
-},
-{
+    {
       "mark": {"type": "line", "color": "#347DB6", "size": 2},
       "transform": [{"regression": "Number of Billionaires", "on": "percent"}],
       "encoding": {
-        "x": {"field": "Number of Billionaires", "type": "quantitative"},
-        "y": {"field": "percent", "type": "quantitative"}
+        "x": {"field": "percent", "type": "quantitative"},
+        "y": {"field": "Number of Billionaires", "type": "quantitative"}
       }
     },
     {
       "transform": [
-        {"regression": "Number of Billionaires", "on": "percent", "params": true},
+        {
+          "regression": "Number of Billionaires",
+          "on": "percent",
+          "params": true
+        },
         {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
       ],
       "mark": {
