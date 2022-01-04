@@ -1,84 +1,83 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "description": "scatterplot showing correlation between GDP per capita and the no of billionaires",
-    "title": {
-        "text": null,
-        "subtitle": null,
-        "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
-        "anchor": "start",
-        "color": "black"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "scatterplot showing correlation between GDP per capita and the no of billionaires",
+  "title": {
+    "text": null,
+    "subtitle": null,
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "height": 150,
+  "width": 150,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/correlation.csv"
+  },
+  "layer": [
+    {
+  "selection": {
+    "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+    "grid": {"type": "interval"}
+  },
+  "mark": {"type": "point", "opacity": 0.5, "color": "#FBCA8B"},
+  "encoding": {
+    "x": {
+      "field": "Number of Billionaires",
+      "type": "quantitative",
+      "scale": {"domain": [-50, 650]},
+      "axis": {
+        "title": "Number of Billionaires",
+        "grid": false,
+        "tickCount": 7
+      }
     },
-    "height": 150,
-    "width": 150,
-    "data": {
-        "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/correlation.csv"
+    "y": {
+      "field": "GDP per capita",
+      "type": "quantitative",
+      "axis": {"title": "GDP per capita", "grid": false}
     },
-    "selection": {
-        "paintbrush": {
-            "type": "multi",
-            "on": "mouseover",
-            "nearest": true
-        },
-        "grid": {
-            "type": "interval",
-            "bind": "scales"
-        }
+    "size": {
+      "condition": {
+        "selection": "paintbrush",
+        "value": 150,
+        "init": {"value": 30}
+      },
+      "value": 30
     },
-    "mark": {
-        "type": "circle",
-        "opacity": 0.5,
-        "color": "#FBCA8B"
+    "tooltip": [
+      {"field": "Year", "type": "nominal", "title": "Year"},
+      {"field": "Country", "type": "ordinal", "title": "Country"},
+      {"field": "GDP per capita", "type": "nominal", "title": "GDP per capita"},
+      {
+        "field": "Number of Billionaires",
+        "type": "nominal",
+        "title": "Number of Billionaires"
+      }
+    ]
+  }
+},
+{
+      "mark": {"type": "line", "color": "#347DB6", "size": 2},
+      "transform": [{"regression": "Number of Billionaires", "on": "GDP per capita"}],
+      "encoding": {
+        "x": {"field": "Number of Billionaires", "type": "quantitative"},
+        "y": {"field": "GDP per capita", "type": "quantitative"}
+      }
     },
-    "encoding": {
-        "x": {
-            "field": "Number of Billionaires",
-            "type": "quantitative",
-            "axis": {
-                "title": "Number of Billionaires",
-                "grid": false,
-                "tickCount": 14
-            }
-        },
-        "y": {
-            "field": "GDP per capita",
-            "type": "quantitative",
-            "axis": {
-                "title": "GDP per capita",
-                "grid": false
-            }
-        },
-        "size": {
-            "condition": {
-                "selection": "paintbrush",
-                "value": 300,
-                "init": {
-                    "value": 70
-                }
-            },
-            "value": 70
-        },
-        "tooltip": [
-            {
-                "field": "Year",
-                "type": "nominal",
-                "title": "Year"
-            },
-            {
-                "field": "Country",
-                "type": "ordinal",
-                "title": "Country"
-            },
-            {
-                "field": "GDP per capita",
-                "type": "nominal",
-                "title": "GDP per capita"
-            },
-            {
-                "field": "Number of Billionaires",
-                "type": "nominal",
-                "title": "Number of Billionaires"
-            }
-        ]
+    {
+      "transform": [
+        {"regression": "Number of Billionaires", "on": "GDP per capita", "params": true},
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
     }
+  ]
 }
