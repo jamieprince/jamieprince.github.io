@@ -1,5 +1,6 @@
 //Back to top button (codes from online resources):
 mybutton = document.getElementById("myBtn");
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -9,4 +10,4 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-\
+
