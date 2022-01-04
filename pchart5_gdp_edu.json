@@ -26,21 +26,22 @@
       },
       "mark": {"type": "point", "opacity": 0.5, "color": "#EC9D3E"},
       "encoding": {
-        "x": {
+        "y": {
           "field": "GDP per capita",
           "type": "quantitative",
           "axis": {
             "title": "GDP per capita",
             "grid": false,
-            "tickCount": 10,
+            "tickCount": 5,
             "labelOverlap": "greedy"
           }
         },
-        "y": {
+        "x": {
           "field": "percent",
           "type": "quantitative",
           "axis": {
             "title": "Educational Attainment",
+            "tickCount": 5,
             "grid": false,
             "format": "%"
           }
@@ -73,8 +74,8 @@
       "mark": {"type": "line", "color": "#347DB6", "size": 2},
       "transform": [{"regression": "GDP per capita", "on": "percent"}],
       "encoding": {
-        "x": {"field": "GDP per capita", "type": "quantitative"},
-        "y": {"field": "percent", "type": "quantitative"}
+        "x": {"field": "percent", "type": "quantitative"},
+        "y": {"field": "GDP per capita", "type": "quantitative"}
       }
     },
     {
