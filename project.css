@@ -52,6 +52,18 @@ p{
     font-size: 10pxp;
 }
 
+#chart5, chart6 { 
+    width: 150;
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+    background-color: White;
+    border: #E0EAED solid 5px;
+    border-radius: 10px;
+    font-family: Inter,sans-serif;
+    font-size: 10pxp;
+}
+
 .container {
     display: flex;
     flex-flow: row wrap;
