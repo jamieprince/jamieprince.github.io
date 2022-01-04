@@ -73,14 +73,17 @@
                 src='question_mark2.png'></b></h1>
     </div>
 
-    <p>The importance of education is unquestionable but does the educational level of not just the
-            individual but the country as a whole play a part in determining our world's wealthiest.</p>
+    <p>The importance of education is unquestionable but does the education level of not only the individual but the
+        country as a whole play a part in determining our world's wealthiest?
+        Will countries with more educated populations produce more billionaires? Is a university degree crucial for
+        achieving exorbitant amounts of wealth? This project seeks to investigate if there are obvious links between
+        wealth and education, with a focus first on the extremely wealthy. To do this, we will look at the trend in
+        education of a select group and then
+    </p>
 
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+    <p> Let us first look at the trend in wealth over the years. We observe that both the number of billionaires and the
+        share of total net worth held by the top 1% have increased substantially over the years- there being a drop in
+        2020 before a dramatic increase in 2021.
     </p>
     <!-- //////// START OF CHARTS //////// -->
 
@@ -96,6 +99,8 @@
     </div>
     <div class="container">
         <a class="codeButton" href="https://en.wikipedia.org/wiki/The_World%27s_Billionaires">Source</a>
+        <a class="codeButton"
+            href="https://github.com/jamieprince/jamieprince.github.io/blob/main/PWikipedia_Scraper.ipynb">Colab</a>
         <a class="codeButton"
             href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/billionaires.csv">Data</a>
         <a class="codeButton"
@@ -114,16 +119,21 @@
     <div class="container">
         <a class="codeButton" href="https://fred.stlouisfed.org/series/WFRBST01134">Source</a>
         <a class="codeButton"
+            href="https://github.com/jamieprince/jamieprince.github.io/blob/main/LoopFREDdownloader.ipynb">Colab</a>
+        <a class="codeButton"
             href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/data_FRED-WFRBST01134.json">Data</a>
         <a class="codeButton"
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart2_wealthshare1.json">Code</a>
     </div>
 
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+    <p> Data from both charts were obtained using Python in Google Colab- the notebooks for which are linked in the
+        Collab button under each respective graph. Chart 1 uses a scrapper to easily save the data from Wikipedia tables
+        into a csv file. Chart 2 uses a loop that batch downloads FRED data in the json format
+    </p>
+
+    <p> I was then interested in seeing what the most popular degree studied by the richest were. Having read an article
+        published by Forbes on the 400 richest in the United States in 2021, I created a bar chart with inline data to
+        visualize what the most popular degree studied by the richest are.
     </p>
 
     <!-- //////// CHART 3 //////// -->
@@ -142,11 +152,11 @@
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart3_degree.json">Code</a>
     </div>
 
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+    <p> With that, I sought to find out how many of the world’s billionaires actually have a bachelor’s degree or have
+        completed tertiary. I selected the top 5 countries with the highest number of billionaires and gathered data on
+        the 10 richest of each country to see whether or not they had attended and completed university. I also included
+        additional data on the 10 richest women as I was curious to see the results of that. Although with a small
+        sample size its interesting
     </p>
 
     <!-- //////// CHART 7 //////// -->
@@ -166,6 +176,12 @@
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart7_billion_yesno.json">Code</a>
     </div>
 
+    <p> Data for this chart was obtained from the Bloomberg’s Billionaires index. I ran into some issues scrapping this
+        site as it protects itself from mining. However, upon inspecting the page source I noticed that all the data I
+        was looking for visible. To circumvent this issue, I saved the html codes externally to my repository and ran my
+        codes through that. I was then able to obtain and clean all the data I wanted using the Python scrapper.
+    </p>
+
     <!-- //////// CHART 8 //////// -->
     <div class="container">
         <div class="chart" id="chart8">
@@ -178,10 +194,25 @@
     <div class="container">
         <a class="codeButton" href="https://www.bloomberg.com/billionaires/">Source</a>
         <a class="codeButton"
+            href="https://github.com/jamieprince/jamieprince.github.io/blob/main/BB_Index_Scraper.ipynb">Colab</a>
+        <a class="codeButton"
             href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Bloomberg_Billionaires_Index.csv">Data</a>
         <a class="codeButton"
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart8_billion_industry.json">Code</a>
     </div>
+
+    <p> We do not observe a clear trend in billionaires and education. However, there exists a clear trend in GDP per
+        capita and education attainment
+        Which industries have brought the most wealth to the world’s billionaires?
+        Finally, I looked at the correlation between a country’s number of billionaires and the education attainment of
+        the country. Data from the world bank was obtained using the following python code
+        Gathered data from 2015-2020 from the world bank and Forbes. The data was combined and cleaned in Microsoft
+        excel.
+
+    </p>
+
+    <h2><span style="color:#F1F0F4">Looking at</span><span style="color:#FF9900">
+        correlations.</span></h2>
 
     <!-- //////// CHART 4 //////// -->
     <div class="container">
@@ -210,26 +241,32 @@
     </div>
     <div class="container">
         <a class="codeButton"
+        href="https://github.com/jamieprince/jamieprince.github.io/blob/main/WorldBankDataDownloader.ipynb">Colab 1</a>
+        <a class="codeButton"
+        href="https://github.com/jamieprince/jamieprince.github.io/blob/main/WorldBankAPIData.ipynb">Colab 2</a>
+        <a class="codeButton"
             href="https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/correlation.csv">Data</a>
         <a class="codeButton"
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart4_bil_edu.json">Code</a>
     </div>
 
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+    <p> We do not observe a clear trend in billionaires and education. However, there exists a clear trend in GDP per
+        capita and education attainment
+        Which industries have brought the most wealth to the world’s billionaires?
+        Finally, I looked at the correlation between a country’s number of billionaires and the education attainment of
+        the country. Data from the world bank was obtained using the following python code
+        Gathered data from 2015-2020 from the world bank and Forbes. The data was combined and cleaned in Microsoft
+        excel.
+
     </p>
 
-        <h1><span style="color:#F1F0F4">In</span><span style="color:#FF9900">
-                conclusion.</span></h1>
-    
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+    <h1><span style="color:#F1F0F4">In</span><span style="color:#FF9900">
+            conclusion.</span></h1>
+
+    <p> More countries and wider data, causation cannot be determined. Other factors of wealth, investigating how many
+        of the world’s wealthiest obtain their wealth by inheritance, do you need to come from a rich family to.
+        How many billionaires are self-made vs generational wealth? The difference between western and Asian countries.
+
     </p>
 
 </body>
