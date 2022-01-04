@@ -65,6 +65,39 @@ p{
     display: inline-block;
 }
 
+#chart14, #chart13{
+    width: auto;
+    height: 300;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    display: inline-block;   
+}
+
+#chart16, #chart15{
+    width: auto;
+    height: 310;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    display: inline-block;   
+}
+
+#chart19, #chart20{
+    width: auto;
+    height: 400;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    display: inline-block;   
+}
+
 .chart-container {
     display: flex;
     align-items: center;
