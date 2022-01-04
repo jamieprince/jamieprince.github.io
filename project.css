@@ -15,6 +15,13 @@ h1, h3{
   letter-spacing: 1px;
 }
 
+h2{
+  font-family: 'Ubuntu', sans-serif;  font-size: 35px;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
 p{
     color:#F1F0F4;
     font-family: 'Roboto', sans-serif;
