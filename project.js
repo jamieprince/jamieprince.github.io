@@ -18,6 +18,11 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-  $(window).load(function() {
-    $('#loading').hide();
-  });
+function showLoader()
+{
+    $(".loader").fadeIn("slow");
+}
+function hideLoader()
+{
+    $(".loader").fadeOut("slow");
+}
