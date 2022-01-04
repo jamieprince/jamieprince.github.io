@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Scatterplot with correlation between education attainment and no of billionaires",
   "title": {
     "text": null,
@@ -15,73 +15,44 @@
     "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/correlation.csv"
   },
   "transform": [
-    {
-      "calculate": "datum.Educationalattainment/100",
-      "as": "percent"
-    },
-    {
-      "filter": {
-        "field": "Educationalattainment",
-        "gt": 0
-      }
-    }
+    {"calculate": "datum.Educationalattainment/100", "as": "percent"},
+    {"filter": {"field": "Educationalattainment", "gt": 0}}
   ],
+    
+    "layer": [
+    {
   "selection": {
-    "paintbrush": {
-      "type": "multi",
-      "on": "mouseover",
-      "nearest": true
-    },
-    "grid": {
-      "type": "interval",
-      "bind": "scales"
-    }
+    "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+    "grid": {"type": "interval"}
   },
-  "mark": {
-    "type": "circle",
-    "opacity": 0.5,
-    "color": "#C96E11"
-  },
+  "mark": {"type": "point", "opacity": 0.5, "color": "#C96E11"},
   "encoding": {
     "x": {
       "field": "Number of Billionaires",
       "type": "quantitative",
+      "scale": {"domain": [-50, 650]},
       "axis": {
         "title": "Number of Billionaires",
         "grid": false,
-        "tickCount": 10
+        "tickCount": 8
       }
     },
     "y": {
       "field": "percent",
       "type": "quantitative",
-      "axis": {
-        "title": "Educational Attainment",
-        "grid": false,
-        "format": "%"
-      }
+      "axis": {"title": "Educational Attainment", "grid": false, "format": "%"}
     },
     "size": {
       "condition": {
         "selection": "paintbrush",
-        "value": 300,
-        "init": {
-          "value": 70
-        }
+        "value": 150,
+        "init": {"value": 30}
       },
-      "value": 70
+      "value": 30
     },
     "tooltip": [
-      {
-        "field": "Year",
-        "type": "nominal",
-        "title": "Year"
-      },
-      {
-        "field": "Country",
-        "type": "ordinal",
-        "title": "Country"
-      },
+      {"field": "Year", "type": "nominal", "title": "Year"},
+      {"field": "Country", "type": "ordinal", "title": "Country"},
       {
         "field": "Number of Billionaires",
         "type": "nominal",
@@ -94,4 +65,28 @@
       }
     ]
   }
+},
+{
+      "mark": {"type": "line", "color": "#347DB6", "size": 2},
+      "transform": [{"regression": "Number of Billionaires", "on": "percent"}],
+      "encoding": {
+        "x": {"field": "Number of Billionaires", "type": "quantitative"},
+        "y": {"field": "percent", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [
+        {"regression": "Number of Billionaires", "on": "percent", "params": true},
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ]
 }
