@@ -5,7 +5,7 @@
         "url": "https://raw.githubusercontent.com/jamieprince/jamieprince.github.io/main/Bloomberg_Billionaires_Index.csv"
     },
     "title": {
-        "text": "Chart 5: Net Worth by Industry",
+        "text": "Chart 5: Cummulative Net Worth by Industry",
         "subtitle": "Source: Bloomberg Billionaire Index 2021",
         "subtitleFontStyle": "italic",
         "subtitleFontSize": 10,
