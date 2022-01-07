@@ -41,7 +41,7 @@
       {
         "field": "undergrad",
         "type": "ordinal",
-        "title": "Has a obtained at least a degree"
+        "title": "Has obtained at least an undergraduate degree"
       },
       {"field": "__count", "type": "nominal", "title": "Number of Billionaires"}
     ]
