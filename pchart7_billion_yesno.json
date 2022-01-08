@@ -20,9 +20,16 @@
       "field": "country",
       "type": "nominal",
       "scale": {
-        "domain": ["United States", "China", "India", "Germany", "Russia", "Women"]
+        "domain": [
+          "United States",
+          "China",
+          "India",
+          "Germany",
+          "Russia",
+          "Women"
+        ]
       },
-      "title": "Top 5 Country's with the Highest Number of Billionaires"
+      "title": null
     },
     "y": {
       "aggregate": "count",
@@ -41,7 +48,7 @@
       {
         "field": "undergrad",
         "type": "ordinal",
-        "title": "Has obtained at least an undergraduate degree"
+        "title": "Has a obtained at least a degree"
       },
       {"field": "__count", "type": "nominal", "title": "Number of Billionaires"}
     ]
