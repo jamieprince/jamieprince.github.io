@@ -76,20 +76,14 @@
                 src='question_mark2.png'></b></h1>
     </div>
 
-    <p>The importance of education is often unquestionable but does the education level of not just an individual but
-        the country as a whole play a part in determining where our world's wealthiest come from? Do countries with more
-        educated populations produce more billionaires? Is a university degree crucial for achieving exorbitant amounts
-        of wealth?
+    <p>This project seeks to investigate if there are obvious links between extreme wealth and education- with a primary
+        focus on billionaires and education at the undergraduate level. Is an undergraduate degree crucial for achieving
+        exorbitant amounts of wealth? Do countries with more educated populations produce more billionaires?
     </p>
 
-    <p> This project seeks to investigate if there are obvious links between wealth and education, with a primary focus
-        on billionaires and education at the undergraduate level.
-    </p>
-
-    <p>Let us first look at the trend in wealth over the years. We observe that both the number of billionaires and the
-        share of total net worth held by the top 1% have an average upward trend. Adjusting Chart 2 to begin in 2008, we
-        see the trend in both charts are very similar- there being a drop in 2009 and in 2020 before a dramatic increase
-        in 2021.
+    <p>Let us first look at the trend in wealth over the years. Both the number of billionaires and the share of total
+        net worth held by the top 1% show an upward trend. Adjusting Chart 2 to begin in 2008, we see the trend in both
+        charts are very similar.
     </p>
 
     <!-- //////// START OF CHARTS //////// -->
@@ -133,16 +127,13 @@
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart2_wealthshare1.json">Code</a>
     </div>
 
-    <p> Data for both charts were obtained using Python in Google Colab- the notebooks for which are linked in the Colab
-        button under the respective charts. Chart 1 used a scrapper to easily save data from Wikipedia tables into a CSV
-        file. Chart 2’s data was obtained using a loop that batch downloads FRED data in the JSON format.
-    </p>
+    <p> Data the charts were obtained using Python in Google Colab- linked in the Colab buttons. Chart 1 used a scrapper
+        to easily save data from Wikipedia tables into a CSV file. Chart 2’s data was obtained using a loop that batch
+        downloads data from the FRED API in JSON format. </p>
 
-    <p> Unable to find complete data on the most common degrees studies by the wealthiest, I gathered data from a
-        written article published by Forbes on the 400 richest in the United States to create a bar chart with inline
-        data. Unsurprisingly, the top 3 degrees are business, economics and engineering. Interestingly we see a larger
-        number who have dropped out of university than those who did not attend at all.
-    </p>
+    <p> Next, I gathered data from an article published by Forbes on the most popular degrees studied by the richest in
+        the US in 2021 to create a bar chart with inline data. Interestingly we see a larger number who have dropped out
+        of university than those who did not attend at all.</p>
 
     <!-- //////// CHART 3 //////// -->
     <div class="container">
@@ -160,17 +151,14 @@
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart3_degree.json">Code</a>
     </div>
 
-    <p>With that, I sought to find out how many of the world’s billionaires actually had a bachelor’s degree or had
-        tertiary education. To do this, I selected the 5 countries with the highest number of billionaires in 2021 and
-        gathered data on the 10 richest individuals of each country. To find out whether each individual had attended
-        university, I again used the Bloomberg Billionaire Index’s webpage. I encountered a limit to the number of
-        profiles of billionaires I could read and gather data from freely without paying for a subscription. To solve
-        this, I used the ‘view page source’ function and was able to read and obtain what I was looking for.
-    </p>
+    <p>With that, I wanted to see the proportions of billionaires who had an undergraduate’s degree. To do this, I
+        selected the 5 countries with the highest number of billionaires in 2021 and gathered data on the 10 richest
+        individuals of each country. The majority in all countries had obtained at least an undergraduate degree.
+        Although this is a very small sample size, it may still prove to be consistent. The US portion tells us 70% of
+        the billionaires had a degree while Chart 3 tells us 80% with a 291 sample size.</p>
 
-    <p>In addition to the 5 countries, I thought it would also be interesting to look at the 10 richest women in 2021.
-        It is worth noting that 9/10 of the women had a bachelors’ degree 9/10 also were said to have obtained their
-        wealth from their family or late husbands.
+    <p>In addition to the 5 countries, I thought it would also be interesting to look at the 10 richest women. It’s
+        worth noting 9/10 of the women obtained their wealth from their family or late husbands.
     </p>
 
     <!-- //////// CHART 7 //////// -->
@@ -190,11 +178,10 @@
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart7_billion_yesno.json">Code</a>
     </div>
 
-    <p> Data for Chart 5 was obtained from the Bloomberg’s Billionaires index. I ran into some issues scrapping this
-        site as it protects itself from mining. However, upon inspecting the page source I noticed that all the data I
-        was looking for were visible in divs. To circumvent this issue, I saved the html of the page externally and
-        uploaded it to my GitHub repository to run my codes through that instead. I was then able to obtain and clean
-        all the data I wanted using the Python scrapper linked in Colab.
+    <p> I ran into some issues scrapping the data used in Chart 5 as the site protects itself from mining. However, upon
+        inspecting the page source I noticed that all the data needed was visible in ‘divs’. To circumvent this, I saved
+        the HTML of the page externally and uploaded it to my GitHub repository and ran my codes through that instead. I
+        was then able to obtain and clean all the data I wanted using the Python scrapper linked.
     </p>
 
     <!-- //////// CHART 8 //////// -->
@@ -216,8 +203,8 @@
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart8_billion_industry.json">Code</a>
     </div>
 
-    <p> Selecting the same 5 countries as above, I was able to see which industry have brought the most wealth in 2021
-        as a whole and in the selected countries.
+    <p> Selecting the same 5 countries, I was able to see which industries brought the most wealth in 2021 and in the
+        selected countries.
     </p>
 
     <h2><span style="color:#F1F0F4">Looking at</span><span style="color:#FF9900">
@@ -227,6 +214,9 @@
         <a class="codeButton"
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/Regression.ipynb">Linear Regression</a>
     </div>
+
+    <p>Now to understand the relationship between the number of billionaires and the education level, I carried out
+        regressions using Vegalite. I ran the same regressions using regplot Seaborn also linked.</p>
 
     <!-- //////// CHART 4 //////// -->
     <div class="container">
@@ -245,13 +235,6 @@
             </script>
         </div>
 
-        <!-- //////// CHART 6 //////// -->
-        <div class="chart" id="chart6">
-            <script>
-                var myChart6 = "pchart6_gdp_bil.json";
-                vegaEmbed('#chart6', myChart6);
-            </script>
-        </div>
     </div>
 
     <div class="container">
@@ -266,29 +249,36 @@
             href="https://github.com/jamieprince/jamieprince.github.io/blob/main/pchart4_bil_edu.json">Code</a>
     </div>
 
-    <p> We do not observe a clear trend in billionaires and education. However, there exists a clear trend in GDP per
-        capita and education attainment
-        Which industries have brought the most wealth to the world’s billionaires?
-        Finally, I looked at the correlation between a country’s number of billionaires and the education attainment of
-        the country. Data from the world bank was obtained using the following python code
-        Gathered data from 2015-2020 from the world bank and Forbes. The data was combined and cleaned in Microsoft
-        excel.
-
+    <p> The percentage of the population over 25 that had completed at least short-cycle tertiary was used as my measure
+        of a country’s education level. It and the GDP per capita data were obtained from the World Bank. This data was
+        challenging to chart. However, I was able to simplify it with the use of pandas. Compiled from various online
+        resources and learning material from the course, Colab 1 was used to obtain WB data on all countries and years
+        while Colab 2 gathered selected countries and years data. Data on the total number of billionaires from each
+        country uses the same Wikipedia scrapper in Chart 1. Data was combined using pandas and Microsoft Excel to
+        contain the 3 indicators from 2015-2020 in 60 countries.
     </p>
+
+    <p>Missing data on education attainment was coded as 0 and filtered in Vegalite to be excluded from the chart. I
+        also used Vegalite’s transform function to show educational attainment to percentage. </p>
+
+    <p>From the charts, we do not observe a clear trend in the number of billionaires and the education level of the
+        country along with a low R squared value. However, there exists a clear trend with National Income- measured as
+        GDP per capita, which is another way to look at wealth. We see a clear positive correlation.</p>
 
     <h2><span style="color:#F1F0F4">In</span><span style="color:#FF9900">
             conclusion.</span></h2>
 
-    <div class="container">
-        <a class="codeButton"
-            href="https://github.com/jamieprince/jamieprince.github.io/tree/main/Project%20Data">Additional Data</a>
-    </div>
 
-    <p> More countries and wider data, causation cannot be determined. Other factors of wealth, investigating how many
-        of the world’s wealthiest obtain their wealth by inheritance, do you need to come from a rich family to.
-        How many billionaires are self-made vs generational wealth? The difference between western and Asian countries.
-
+    <p> Addressing the two main questions at the beginning, it would seem the majority of billionaires do in fact have
+        an undergraduate degree. However, we cannot view this as causal. As for the second question posed, we cannot
+        conclude that countries with more educated populations produce more billionaires. But, there seems to be a
+        positive correlation between wealth and education.
     </p>
+
+    <p>To take this research further, it may be interesting to look at the difference in education for billionaires in
+        different geographical regions. From Chart 4, I believe billionaires in Asian countries are less likely to have
+        tertiary education than in western countries. As alluded to earlier, it may also be interesting to look at how
+        many of the world’s wealthiest come from already wealthy families.</p>
 
     <div class="container">
         <button onclick="topFunction()" id="myBtn" title="Back to top">Back to top</button>
