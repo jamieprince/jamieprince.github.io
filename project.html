@@ -43,7 +43,7 @@
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
-<!--Wordcount:  -->
+<!--Wordcount: 795-->
 <!-- Data files for each chart are in my github repository- most of which are linked. -->
 <!-- chart files are named 'pchart(number)' in the main Github repository -->
 
@@ -129,11 +129,13 @@
 
     <p> Data the charts were obtained using Python in Google Colab- linked in the Colab buttons. Chart 1 used a scrapper
         to easily save data from Wikipedia tables into a CSV file. Chart 2’s data was obtained using a loop that batch
-        downloads data from the FRED API in JSON format. </p>
+        downloads data from the FRED API in JSON format. 
+    </p>
 
     <p> Next, I gathered data from an article published by Forbes on the most popular degrees studied by the richest in
         the US in 2021 to create a bar chart with inline data. Interestingly we see a larger number who have dropped out
-        of university than those who did not attend at all.</p>
+        of university than those who did not attend at all.
+    </p>
 
     <!-- //////// CHART 3 //////// -->
     <div class="container">
@@ -155,7 +157,8 @@
         selected the 5 countries with the highest number of billionaires in 2021 and gathered data on the 10 richest
         individuals of each country. The majority in all countries had obtained at least an undergraduate degree.
         Although this is a very small sample size, it may still prove to be consistent. The US portion tells us 70% of
-        the billionaires had a degree while Chart 3 tells us 80% with a 291 sample size.</p>
+        the billionaires had a degree while Chart 3 tells us 80% with a 291 sample size.
+    </p>
 
     <p>In addition to the 5 countries, I thought it would also be interesting to look at the 10 richest women. It’s
         worth noting 9/10 of the women obtained their wealth from their family or late husbands.
@@ -207,6 +210,10 @@
         selected countries.
     </p>
 
+    <br>
+    <br>
+    <br>
+
     <h2><span style="color:#F1F0F4">Looking at</span><span style="color:#FF9900">
             correlations.</span></h2>
 
@@ -216,7 +223,8 @@
     </div>
 
     <p>Now to understand the relationship between the number of billionaires and the education level, I carried out
-        regressions using Vegalite. I ran the same regressions using regplot Seaborn also linked.</p>
+        regressions using Vegalite. I ran the same regressions using regplot Seaborn also linked.
+    </p>
 
     <!-- //////// CHART 4 //////// -->
     <div class="container">
@@ -259,11 +267,17 @@
     </p>
 
     <p>Missing data on education attainment was coded as 0 and filtered in Vegalite to be excluded from the chart. I
-        also used Vegalite’s transform function to show educational attainment to percentage. </p>
+        also used Vegalite’s transform function to show educational attainment to percentage. 
+    </p>
 
     <p>From the charts, we do not observe a clear trend in the number of billionaires and the education level of the
         country along with a low R squared value. However, there exists a clear trend with National Income- measured as
-        GDP per capita, which is another way to look at wealth. We see a clear positive correlation.</p>
+        GDP per capita, which is another way to look at wealth. We see a clear positive correlation.
+    </p>
+
+    <br>
+    <br>
+    <br>
 
     <h2><span style="color:#F1F0F4">In</span><span style="color:#FF9900">
             conclusion.</span></h2>
@@ -278,12 +292,19 @@
     <p>To take this research further, it may be interesting to look at the difference in education for billionaires in
         different geographical regions. From Chart 4, I believe billionaires in Asian countries are less likely to have
         tertiary education than in western countries. As alluded to earlier, it may also be interesting to look at how
-        many of the world’s wealthiest come from already wealthy families.</p>
+        many of the world’s wealthiest come from already wealthy families.
+    </p>
+
+    <br>
+    <br>
+    <br>
 
     <div class="container">
         <button onclick="topFunction()" id="myBtn" title="Back to top">Back to top</button>
     </div>
+
     <br>
     <br>
     <br>
+
 </body>
